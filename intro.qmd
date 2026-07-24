@@ -1,0 +1,91 @@
+## EV sales in US reaching ~10% of sales {style="text-align: center;"}
+
+![](/figs/study-1/ev_sales_us.png){fig-align="center" width="80%"}
+
+::: {style="width: 80%; margin: 0 auto; text-align: right; font-size: 24px;"}
+Source: Argonne National Lab, [www.anl.gov/ev-facts/model-sales](https://www.anl.gov/ev-facts/model-sales)
+:::
+
+## Introduction {.smaller}
+
+- **Unmanaged** BEV charging is becoming a problem to the grid.
+- **Managed** charging is cheaper and smoothes out the grid load.
+- **Smart** charging: Supplier-Managed Charging (SMC) and Vehicle-to-Grid (V2G).
+
+![](/figs/study-1/smart_charging.png){fig-align="center" width="65%"}
+
+::: {.notes}
+Unmanaged BEV charging is becoming a problem to the grid due to the spike. That's why we need managed charging to smoothes out the grid load as well as keep the price low.
+
+Smart charging is a type of managed charging, which includes Supplier-Managed Charging, shortened as SMC, and Vehicle-to-Grid, shortened as V2G.
+:::
+
+## SMC - Supplier Managed Charging
+
+::: {style="font-size: 32px;"}
+- SMC smooths out EV charging spike (called "Peak-shaving").
+- Electricity demand is controlled below capacity threshold.
+- It saves money and reduces pollution.
+:::
+
+![](/figs/study-1/education_1_half.png){fig-align="center" width="90%"}
+
+::: {.notes}
+For SMC, Supplier-Managed Charging, it smooths out the overnight EV charging demand.
+
+As you can see, with unmanaged charging, the BEV load easily passes over the capacity threshold.
+:::
+
+## SMC - Supplier Managed Charging
+
+::: {style="font-size: 32px;"}
+- SMC smooths out EV charging spike (called "Peak-shaving").
+- Electricity demand is controlled below capacity threshold.
+- It saves money and reduces pollution.
+:::
+
+![](/figs/study-1/education_1.png){fig-align="center" width="90%"}
+
+::: {.notes}
+But with SMC, the electricity demand is controlled below the threshold. It reduces the peak demand and saves money.
+:::
+
+## V2G - Vehicle-to-Grid
+
+![](/figs/study-1/education_2.png){fig-align="center" width="70%"}
+
+::: {.notes}
+V2G is short for Vehicle-to-Grid. It is another type of smart charging that allows BEV owners to sell electricity back to the grid. With V2G, BEVs become potential sources of electricity.
+:::
+
+## Smart charging effectiveness depends on<br><span style="color: #2C8475;">enrollment</span> and <span style="color: #2C8475;">peak-shaving</span>. {.light-centered .center}
+
+## Three Inter-connected Studies {.light-centered .center}
+
+<br>
+
+::: {.fragment}
+#### <span style="color: #2C8475;">Survey Research & Modeling</span> {style="text-align: center;"}
+
+::: {.centered-container style="width: 900px;"}
+Electric Vehicle Smart Charging Adoption
+:::
+:::
+
+<br>
+
+::: {.fragment .column}
+#### <span style="color: #2C8475;">Simulation Research</span>
+
+::: {.centered-container style="width: 400px;"}
+Grid Peak-Shaving Quantification
+:::
+:::
+
+::: {.fragment .column}
+#### <span style="color: #2C8475;">Software Development</span> 
+
+::: {.centered-container style="width: 400px;"}
+The `surveydown` Survey Platform
+:::
+:::

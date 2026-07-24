@@ -1,0 +1,436 @@
+```{r}
+#| label: setup-study-3
+#| include: false
+source("scripts.R")
+```
+
+## <span style="color: #FFB84D;">Study 3</span><br>The `surveydown` Survey Platform {.dark-centered .center}
+
+<br>
+
+::: {style="font-size: 28px;"}
+Published in *PLoS ONE*:
+
+<br>
+
+Hu, Pingfan, Bunea, Bogdan, & Helveston, J. P. (2025). "surveydown: An open-source, markdown-based platform for programmable and reproducible surveys" *PLOS ONE*, 20(8), e0331002. https://doi.org/10.1371/journal.pone.0331002
+:::
+
+## Typical Web Survey {.light-centered .center}
+
+![](/figs/study-3/demo.gif){fig-align="center" width="80%" .purple-border}
+
+## Google Form - GUI Interface {.light-centered .center}
+
+![](/figs/study-3/google-form.png){fig-align="center" width="90%"}
+
+## {.light-centered .center}
+
+::: {.column width="70%"}
+![](/figs/study-3/google-form.png)
+:::
+
+::: {.column width="30%"}
+
+### Limitations
+
+<br>
+
+::: {style="text-align: left;"}
+
+❌ Reproduciblity
+
+::: {.fragment}
+❌ Version control
+:::
+
+::: {.fragment}
+❌ Limited features
+:::
+
+::: {.fragment}
+❌ Open source
+:::
+
+:::
+:::
+
+## Qualtrics - Commercial Platform {.light-centered .center}
+
+![](/figs/study-3/qualtrics-market-share.png){fig-align="center" width=100% .purple-border}
+
+::: {.fragment style="font-size: 50px;"}
+Expensive!
+:::
+
+## {.dark-centered .center}
+
+::: {.column width="40%"}
+
+<br>
+<br>
+
+### Why not make surveys from `code`? 
+
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column .fragment style="width: 40%; text-align: left;"}
+
+### ~~Limitations~~<br>Features
+
+✅ Reproducibility
+
+✅ Version control
+
+✅ Lots of features
+
+✅ Open source
+
+✅ Free!
+
+:::
+
+## Introducing `surveydown`! {.dark-centered .center style="font-size: 1.2em;"}
+
+<br>
+
+![](/figs/study-3/logo-surveydown.png){fig-align="center" width=300}
+
+## R package that renders <span style="color: #2C8475;">Quarto</span> files into <span style="color: #2C8475;">surveys</span> {.light-centered .center}
+
+<br>
+
+![](/figs/study-3/what-is-surveydown.png){fig-align="center" width=100%}
+
+## <span style="color: #2C8475;">Quarto</span> is a publishing system {.light-centered .center}
+
+<br>
+
+![](/figs/study-3/quarto-process.png){fig-align="center" width=100% .purple-border}
+
+## {style="font-size: 0.7em;"}
+
+::: {.column width="48%"}
+
+### Original `qmd` file {style="text-align: center;"}
+
+<br>
+<br>
+
+::: {style="text-align: center;"}
+Markdown + `R code` chunks
+:::
+
+```{r}
+#| results: 'asis'
+quarto_r_html()
+```
+
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column .fragment width="48%"}
+
+### Rendered HTML {style="text-align: center;"}
+
+<br>
+
+![](/figs/study-3/quarto-r-html.png){fig-align="center" width=100%}
+
+:::
+
+## {style="font-size: 0.7em;"}
+
+::: {.column width="48%"}
+
+### Original `qmd` file {style="text-align: center;"}
+
+<br>
+<br>
+
+::: {style="text-align: center;"}
+Markdown + `Python code` chunks
+:::
+
+```{r}
+#| results: 'asis'
+quarto_python_pdf()
+```
+
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column .fragment width="48%"}
+
+### Rendered PDF {style="text-align: center;"}
+
+<br>
+
+![](/figs/study-3/quarto-python-pdf.png){fig-align="center" width=100%}
+
+:::
+
+## {.light-centered .center}
+
+![](/figs/study-3/what-is-surveydown.png){width=100%}
+
+
+## {style="font-size: 0.7em;"}
+
+::: {.column width="48%"}
+
+### `survey.qmd` {style="text-align: center;"}
+
+```{r}
+#| results: 'asis'
+surveycode()
+```
+
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+
+### Rendered Survey {style="text-align: center;"}
+
+<br>
+
+![](/figs/study-3/survey-question.png){fig-align="center" width=600}
+
+:::
+
+## {style="font-size: 0.7em;"}
+
+::: {.column width="48%"}
+
+### `survey.qmd` {style="text-align: center;"}
+
+```{r}
+#| results: 'asis'
+surveycode("1-5")
+```
+
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+
+::: {.bubble-left style="display: block; transform: none; top: 10%;"}
+YAML header for a "clean" output
+:::
+
+:::
+
+## {style="font-size: 0.7em;"}
+
+::: {.column width="48%"}
+
+### `survey.qmd` {style="text-align: center;"}
+
+```{r}
+#| results: 'asis'
+surveycode("7-9")
+```
+
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+
+::: {.bubble-left style="display: block; transform: none; top: 25%;"}
+Load the `surveydown` Package
+:::
+
+:::
+
+## {style="font-size: 0.7em;"}
+
+::: {.column width="48%"}
+
+### `survey.qmd` {style="text-align: center;"}
+
+```{r}
+#| results: 'asis'
+surveycode("11,29")
+```
+
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+
+::: {.bubble-left style="display: block; transform: none; top: 32%;"}
+Use Quarto fences (`:::`)
+
+to define survey pages
+:::
+
+:::
+
+## {style="font-size: 0.7em;"}
+
+::: {.column width="48%"}
+
+### `survey.qmd` {style="text-align: center;"}
+
+```{r}
+#| results: 'asis'
+surveycode("13-27")
+```
+
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+
+::: {.bubble-left style="display: block; transform: none; top: 45%;"}
+Page content
+
+- Markdown for texts, images, etc.
+- `sd_question()` for survey questions
+- `sd_next()` for page navigation
+:::
+
+:::
+
+## {style="font-size: 0.7em;"}
+
+::: {.column width="48%"}
+
+### `survey.qmd` {style="text-align: center;"}
+
+```{r}
+#| results: 'asis'
+surveycode()
+```
+
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+
+### Rendered Survey {style="text-align: center;"}
+
+<br>
+
+![](/figs/study-3/survey-question.png){fig-align="center" width=600}
+
+:::
+
+## {style="font-size: 0.7em;"}
+
+::: {.column width="48%"}
+
+### `survey.qmd` {style="text-align: center;"}
+
+```{r}
+#| results: 'asis'
+surveycode("18,20,21,22")
+```
+
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+
+### Rendered Survey {style="text-align: center;"}
+
+![](/figs/study-3/survey-question.png){fig-align="center" width=600}
+
+![](/figs/study-3/has-fav-hero.png){fig-align="center" width=180 style="margin-top: -40px;"}
+
+:::
+
+## Quarto renders to <span style="color: #FFB84D;">static</span> html pages.<br>Shiny turns them <span style="color: #FFB84D;">interactive</span>. {.dark-centered .center}
+
+<br>
+
+![](/figs/study-3/logo-shiny.png){fig-align="center" width=300}
+
+## {.light-centered .center}
+
+![](/figs/study-3/what-is-surveydown-3.png){width=100%}
+
+## A complete `surveydown` survey {.light-centered .center}
+
+<br>
+
+::: {.column style="width: 48%;"}
+`survey.qmd`
+
+A **Quarto doc** defining the survey content (pages, texts, images, questions, etc).
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column style="width: 48%;"}
+`app.R`
+
+An **R script** defining the survey Shiny app.
+:::
+
+## PostgreSQL for response <span style="color: #FFB84D;">data</span> storage. {.dark-centered .center}
+
+<br>
+
+![](/figs/study-3/logo-postgres.png){width=300}
+
+## [`supabase.com`](https://supabase.com) {.light-centered .center}
+
+![](/figs/study-3/supabase-table.png){width=100%}
+
+## Technologies of `surveydown` {.light-centered .center}
+
+<br>
+
+![](/figs/study-3/technologies.svg){fig-align="center" width=100%}
+
+## `surveydown` is feature-packed! {.light-centered .center}
+
+![](/figs/study-3/features.png){width=75%}
+
+## `surveydown` is highly flexible and customizable to user needs {.dark-centered .center style="font-size: 1.2em;"}
+
+## Randomization: Conjoint question {.light-centered}
+
+<br>
+
+![](/figs/study-1/conjoint_example.jpg){fig-align="center" width="80%"}
+
+## Shiny compatibility: `leaflet` map {.light-centered}
+
+![](/figs/study-3/leaflet.gif){fig-align="center" width=65%}
+
+## `surveydown` vs other platforms {.light-centered .center}
+
+<br>
+
+![](/figs/study-3/comparisons.png){fig-align="center" width=100% .purple-border}
+
+## Star Count on GitHub {.light-centered}
+
+![](/figs/study-3/surveydown-star-history.png){fig-align="center" width=80% .purple-border}
+
+## [**surveydown.org**](https://surveydown.org) {.dark-centered .center style="font-size: 1.2em;"}

@@ -1,0 +1,8 @@
+Slides for my talk on PhD thesis proposal
+
+*PhD Proposal Defense:
+Electric Vehicle Smart Charging Adoption,
+Grid Peak-Shaving Quantification, and
+The `surveydown` Survey Platform*
+
+Oct 29, 2025, Washington, DC

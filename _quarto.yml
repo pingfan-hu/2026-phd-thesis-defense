@@ -1,0 +1,35 @@
+project:
+  type: website
+  output-dir: _site
+
+pagetitle: "PhD Proposal"
+title: "PhD Proposal Defense:<br><span style='font-size: 0.7em;'>Electric Vehicle Smart Charging Adoption,<br>Grid Peak-Shaving Quantification, and<br>The `surveydown` Survey Platform</span>"
+author: "<br>**Pingfan Hu**<br>George Washington University"
+
+format:
+  revealjs: 
+    smaller: false
+    theme: styles/theme.scss
+    css: styles/slides.css
+    bibliography: bibliography.bib
+    slide-number: true
+    embed-resources: false
+    auto-stretch: false
+    preview-links: auto
+    logo: figs/logo.png
+    footer: "<a href='http://pingfanhu.com'>Pingfan Hu</a> - PhD Proposal Defense"
+    link-external-newwindow: true
+    link-external-icon: false
+    center-title-slide: true
+    code-block-height: 650px
+    title-slide-attributes:
+      data-background-image: figs/logo.png
+      data-background-size: 18%
+      data-background-opacity: "1"
+      data-background-position: right 20% center
+      class: custom-title-slide
+      style: text-align:left;
+
+execute: 
+  warning: false
+  echo: false

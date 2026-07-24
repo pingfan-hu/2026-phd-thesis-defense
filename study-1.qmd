@@ -1,0 +1,473 @@
+```{r}
+#| label: setup-study-1
+#| include: false
+library(tidyverse)
+library(kableExtra)
+```
+
+## <span style="color: #FFB84D;">Study 1</span><br>Electric Vehicle Smart Charging Adoption {.dark-centered .center}
+
+<br>
+
+::: {style="font-size: 30px;"}
+Under second round of reviews:
+
+<br>
+
+Hu, Pingfan, Tarroja, B., Dean, M., Forrest, K., Hittinger, E., Jenn, A. & Helveston, J.P. (2024) "Measuring Electric Vehicle Owners' Willingness to Participate in BEV Smart Charging Programs" *Environmental Research Letters*.
+:::
+
+## Prior studies have few EV owners in sample
+
+1. A survey-based study by @wong_incentives_2023 examined **incentives** effect on EV owners' acceptance, <span style="color: #739C69">but EV ownership in sample was only 19%</span>.
+2. A survey-based study by @philip_consumer_2024 found **range anxiety** matters, <span style="color: #739C69">but EV ownership in sample was only 1.28%</span>.
+3. A survey-based study by @huang_are_2021 indicates the importance of **fast charging**, <span style="color: #739C69">but the sample size was only 157</span>.
+
+<br>
+
+::: {.centered-container}
+We need high EV ownership & large sample size.
+:::
+
+::: {.notes}
+There's been a few studies that looked on people's willingness to participate to smart charging programs, but they all have small sample size and low EV ownership. Therefore, we aimed to conduct a large-scale survey with high EV ownership to study BEV owners' preferences.
+:::
+
+## Research Questions {style="line-height: 2;"}
+
+1. **Sensitivity**: How do changes in smart charging program **features** influence BEV owners' willingness to opt in?
+
+2. **Enrollment Rate**: Under what **combinations of features** will BEV owners be more willing to opt in to smart charging programs?
+
+<br>
+
+::: {.centered-container}
+**Conjoint survey** to collect BEV owners' willingness.
+:::
+
+::: {.centered-container}
+**Mixed logit model** for utility simulations.
+:::
+
+::: {.notes}
+Here we have 2 research questions. Firstly, we want to know the sensitivity of each smart charging program feature; secondly, we want to know under what conditions will BEV owners be more willing to opt in to the programs.
+
+In order to answer these questions, we designed a conjoint survey to collect BEV owners' willingness to participate. Then we used mixed logit models to simulate the utility of each program feature.
+:::
+
+## Survey Design {.light-centered}
+
+<br>
+<br>
+
+::: {.columns}
+::: {style="text-align: center;" .column .fragment}
+### Conjoint Questions {style="text-align: center; font-size: 36px; color: #739C69;"}
+1. Monetary Incentives
+2. Charging Limitations
+3. Flexibility
+:::
+
+::: {style="text-align: center;" .column .fragment}
+### Demographic Questions {style="text-align: center; font-size: 36px; color: #739C69;"}
+1. BEV Ownership
+2. Personal Info
+3. Household Info
+:::
+:::
+
+## Conjoint Question Explained
+
+### A Sample Conjoint Question {style="padding-top: 0.5em; text-align: center; font-size: 36px; color: #739C69;"}
+
+![](/figs/study-1/conjoint_example.jpg){fig-align="center" width="80%"}
+
+::: {style="margin-left: 3em;"}
+1. Provide respondents with different **sets** of attributes.
+2. Observe choices across random sets.
+3. Estimate **utility** of each attribute.
+:::
+
+::: {.notes}
+But first, I want to explain what conjoint question is. If I care about apples, I would want to know how people value type vs price vs freshness. In this apple example, you can only choose one set of the attributes, so if you pick one option, you pick all the attributes in it. In short, conjoint is about forcing people to make trade-offs.
+:::
+
+## SMC Programs {.smaller style="line-height: 1.8;"}
+
+::: {.columns}
+::: {.column .fragment style="padding-top: 0.5em;"}
+
+### Attributes {style="text-align: center; font-size: 36px; color: #739C69;"}
+
+::: {style="border: 2px solid #333; border-radius: 8px;"}
+
+```{r}
+smc_attributes <- tibble(
+  `No.` = seq(1, 5),
+  Attributes = c(
+    "Enrollment Cash",
+    "Monthly Cash",
+    "Monthly Override",
+    "Min Battery",
+    "Guaranteed Battery"
+  ),
+  Range = c("$50 to $300", "$2 to $20", "0 to 5", "20% to 40%", "60% to 80%")
+)
+
+smc_attributes_kable <- smc_attributes %>%
+  kable(escape = FALSE, align = c("c", "l", "l")) %>%
+  kable_styling(position = "center")
+
+smc_attributes_kable
+```
+
+:::
+:::
+
+::: {.column .fragment style="padding-top: 0.5em;"}
+
+### Sample Program {style="text-align: center; font-size: 36px; color: #739C69;"}
+
+::: {style="border: 2px solid #333; border-radius: 8px;"}
+
+```{r}
+smc_options <- tibble(
+  Attributes = c("Enrollment Cash", "Monthly Cash", "Monthly Override"),
+  Values = c(scales::dollar(300), scales::dollar(20), 5)
+)
+
+smc_options_kable <- smc_options %>%
+  kable(escape = FALSE, align = c("c", "c")) %>%
+  column_spec(column = 1, width = '16em') %>%
+  column_spec(column = 2, width = '10em') %>%
+  kable_styling(position = "center")
+
+smc_options_kable
+```
+
+<div style="text-align: center; font-size: 20px;">
+
+![](https://raw.githubusercontent.com/pingfan-hu/pingfanResources/main/bev/battery_smc/u_200_g_160_m_80.png){width="100%" style="width: 400px;"}
+
+(Range determined by stated vehicle they own)
+
+</div>
+
+:::
+:::
+:::
+
+::: {.notes}
+Let's move on to the conjoint question for SMC programs. Again SMC is short for Supplier-Managed Charging. These are the 5 attributes of SMC. You can see there are cash, override, and battery thresholds, and they all have reasonable ranges. For example, for enrollment cash we have $50 to $300.
+
+Here is a sample SMC program. You can see the one-time enrollment cash, recurring monthly cash, and how many times per month the charging can be shifted back to normal.
+
+The battery thresholds here are well-designed to provide an immediate visual aid of the minimum battery and guaranteed battery. We also used milage instead of percentage to make it more intuitive. The mileage will be shown according to the real values of each participant.
+:::
+
+## V2G Programs {.smaller style="line-height: 1.8;"}
+
+::: {.columns}
+::: {.column style="padding-top: 0.5em;"}
+
+### Attributes {style="text-align: center; font-size: 36px; color: #739C69;"}
+
+::: {style="border: 2px solid #333; border-radius: 8px;"}
+
+```{r}
+v2g_attributes <- tibble(
+  `No.` = seq(1, 5),
+  Attributes = c(
+    "Enrollment Cash",
+    "Occurrence Cash",
+    "Monthly Occurrence",
+    "Lower Bound",
+    "Guaranteed Battery"
+  ),
+  Range = c("$50 to $300", "$2 to $20", "1 to 4", "20% to 40%", "60% to 80%")
+)
+
+v2g_attributes_kable <- v2g_attributes %>%
+  kable(escape = FALSE, align = c("c", "l", "l")) %>%
+  kable_styling(position = "center")
+
+v2g_attributes_kable
+```
+
+:::
+:::
+
+::: {.column style="padding-top: 0.5em;"}
+
+### Sample Program {style="text-align: center; font-size: 36px; color: #739C69;"}
+
+::: {style="border: 2px solid #333; border-radius: 8px;"}
+
+```{r}
+v2g_options <- tibble(
+  Attributes = c("Enrollment Cash", "Occurrence Cash", "Monthly Occurrence"),
+  Values = c(scales::dollar(300), scales::dollar(20), 1)
+)
+
+v2g_options_kable <- v2g_options %>%
+  kable(escape = FALSE, align = c("c", "c")) %>%
+  column_spec(column = 1, width = '16em') %>%
+  column_spec(column = 2, width = '10em') %>%
+  kable_styling(position = "center")
+
+v2g_options_kable
+```
+
+<div style="text-align: center; font-size: 20px;">
+
+![](https://raw.githubusercontent.com/pingfan-hu/pingfanResources/main/bev/battery_v2g/u_200_g_160_l_80.png){width="100%" style="width: 400px;"}
+
+(Range determined by stated vehicle they own)
+
+</div>
+
+:::
+:::
+:::
+
+::: {.notes}
+This is the conjoint question design for V2G programs. V2G is short for Vehicle-to-Grid. The attributes are similar to SMC, but with some differences. For example, we have monthly occurrence instead of monthly override.
+
+The battery thresholds are in the same layout, but since V2G drains the battery, the lower bound is how much the battery is drained to, and guaranteed battery is how much it's charged back to.
+:::
+
+## Sample SMC Question
+
+![](/figs/study-1/smc_question.jpg){fig-align="center"}
+
+::: {.notes}
+There are 6 SMC conjoint questions. In each question, participants are provided with 2 valid options and a "Not Interested" option. It's important to have this "Not Interested" option, because it is a validation of willingness. When participants choose from these 2 valid options, they are surely to be interested in what they choose. Otherwise, they will choose "Not Interested".
+:::
+
+## Sample V2G Question
+
+![](/figs/study-1/v2g_question.jpg){fig-align="center"}
+
+::: {.notes}
+Likewise, there are 6 V2G conjoint questions.
+:::
+
+## Survey Fielding - 1,356 in Total
+
+::: {.columns}
+::: {.column width="40%"}
+![](/figs/study-1/meta_ad.png)
+:::
+
+::: {.column width="60%"}
+
+<span style="color: #739C69">**Meta Ads**</span>: Voluntary participants
+
+- **803** responses
+- March to July in 2024
+
+<span style="color: #739C69">**Dynata Recruitment**</span>: Paid survey
+
+- **553** responses
+- September to November in 2024
+
+![](/figs/study-1/survey_fielding.png)
+
+:::
+:::
+
+::: {.notes}
+We collected in total of 1,356 complete, filtered responses from Meta and Dynata throughout 2024, and we made sure that all participants are real BEV owners.
+:::
+
+## Survey Question - Car Ownership
+
+![](/figs/study-1/car_ownership.png){fig-align="center" width="55%"}
+
+## Survey Results - Top 10 BEV
+![](/figs/study-1/top_bev.png)
+
+::: {.notes}
+This is a showcase of the top 10 BEV models from our survey results. You can see that Tesla is the most popular brand, followed by Ford, Chevrolet, and some other popular brands. These results are also representative of the BEV market in the United States.
+:::
+
+## Survey Results - Demographics
+
+::: {.fragment style="fig-align: center;"}
+![](/figs/study-1/result_1.png)
+:::
+
+::: {.fragment style="fig-align: center;"}
+![](/figs/study-1/result_2.png)
+:::
+
+::: {.fragment style="fig-align: center;"}
+![](/figs/study-1/result_3.png)
+:::
+
+::: {.notes}
+Other than the BEV models, there are also some important demographics information collected in the survey. You can see most families have 2 cars; most of owners charge at home for more than 8 hours; and most of them care of climate very much. And more importantly, we have 100% BEV ownership.
+:::
+
+## Survey Results - Willingness to Participate {.smaller}
+
+::: {.fragment}
+### Mixed Logit Models {style="text-align: center; font-size: 28px; color: #739C69;"}
+
+$$
+\small
+\begin{align*}
+u_j = v_j + \epsilon_j = \beta' x + \epsilon_j
+\qquad
+P_j = \frac{e^{v_j}}{\sum_{k=1}^{J} e^{v_k}}
+\end{align*}
+$$
+
+::: {style="text-align: center;"}
+Utility esimated using maximum likelihood estimation (MLE).
+:::
+:::
+
+::: {.columns .fragment}
+::: {.column style="padding-top: 0.5em;"}
+### SMC Estimates {style="text-align: center; font-size: 24px; color: #739C69;"}
+
+![](/figs/study-1/smc_mxl_plot.png){fig-align="center"}
+:::
+
+::: {.column style="padding-top: 0.5em;"}
+### V2G Estimates {style="text-align: center; font-size: 24px; color: #739C69;"}
+
+![](/figs/study-1/v2g_mxl_plot.png){fig-align="center"}
+:::
+:::
+
+::: {.fragment style="text-align: center; color: #E74C3C;"}
+**Without compensation, users will not participate.**
+:::
+
+::: {.notes}
+The willingness to participate is quantified with the mixed logit model, shortened as MNL. The utility of each option is a linear combination of the attributes, which is the $v_j$ here, plus an error term, shown as $\epsilon_j$. The probability of choosing an option is the exponential of its utility divided by the sum of exponentials of all utilities.
+
+Here are the coefficient estimate plots of both programs. As you can see, the "No Choice" has highgest coefficient, which simply means that without compensation, users will not participate in the programs.
+
+However, coefficients alone are not enough to interpret the willingness to participate. A more intuitive approach is the sensitivity, which means by how much the enrollment rate will change when a feature value changes.
+:::
+
+## Enrollment Sensitivity {.smaller style="line-height: 1.8;"}
+
+::: {.columns}
+::: {.column style="padding-top: 1em;"}
+### Baseline Simulation {style="text-align: center; font-size: 36px; color: #739C69;"}
+
+::: {style="text-align: center; font-size: 24px;"}
+Choice between "None" and this program:
+:::
+
+::: {style="border: 2px solid #333; border-radius: 8px;"}
+```{r}
+attribute_table_enroll_cash <- tibble(
+    Attributes = c("Enrollment Cash", "Monthly Cash", "Monthly Override"),
+    Values = c("$0", "$0 - $20", "0")
+)
+
+attribute_kable_enroll_cash <- attribute_table_enroll_cash %>% 
+    kable(escape = FALSE, align = c("c", "c")) %>% 
+    column_spec(column = 1, width = '16em') %>%
+    column_spec(column = 2, width = '10em') %>% 
+    kable_styling(position = "center") %>% 
+    row_spec(2, bold = TRUE, color = "#ED6D46")
+
+attribute_kable_enroll_cash
+```
+
+::: {style="text-align: center;"}
+
+<img src="https://raw.githubusercontent.com/pingfan-hu/resources/main/bev/battery_smc/u_200_g_120_m_40.png" style="width: 400px; width: 100%; height: auto;"/>
+
+:::
+:::
+:::
+
+::: {.column style="padding-top: 1em;"}
+### Sensitivity Plot {style="text-align: center; font-size: 36px; color: #739C69;"}
+![](/figs/study-1/sensitivity_plot_1.png){fig-align="center"}
+:::
+:::
+
+::: {.notes}
+This is one example of the sensitivity plots. As the enrollment cash increases, the user enrollment increases as well. The solid part is from the results, and the dotted part is the extrapolation with the model.
+:::
+
+## Enrollment Sensitivity
+
+![](/figs/study-1/sensitivity_plot_2.png){fig-align="center"}
+
+::: {style="text-align: center; font-size: 26px;"}
+1. Steeper slope indicates higher sensitivity.
+2. Diminishing returns exist.
+:::
+
+::: {.notes}
+And here we have a full demonstration of all sensitivity plots. Steeper slope indicates higher sensitivity. Also, as the feature values become higher, we see diminishing returns. But the solid parts are basically linear.
+:::
+
+## Equivalencies of 5% Enrollment Increase
+
+<br>
+
+::: {.columns}
+::: {.column}
+
+### SMC {style="text-align: center; font-size: 36px; color: #739C69;"}
+
+```{r}
+smc_attr_equiv <- data.frame(
+  Attribute = c("Enrollment Cash", "Monthly Cash", "Override Days",
+                "Minimum Threshold", "Guaranteed Threshold"),
+  Equivalence = c(77.7, 4.0, 2.5, 65.5, 6.3),
+  Unit = c("$", "$", "Days", "%", "%")
+)
+
+smc_attr_equiv %>%
+  kbl(col.names = c("Attribute", "Equivalence Value", "Unit"),
+      align = c("l", "c", "c")) %>%
+  kable_styling(font_size = 19) %>%
+  row_spec(0, bold = TRUE) %>% 
+  row_spec(5, bold = TRUE, color = "#ED6D46")
+```
+
+:::
+
+::: {.column}
+
+### V2G {style="text-align: center; font-size: 36px; color: #739C69;"}
+
+```{r}
+v2g_attr_equiv <- data.frame(
+  Attribute = c("Enrollment Cash", "Occurrence Cash",
+                "Monthly Occurrence", "Lower Bound",
+                "Guaranteed Threshold"),
+  Equivalence = c(55.7, 2.9, 1.9, 11.7, 9.1),
+  Unit = c("$", "$", "Times", "%", "%")
+)
+
+v2g_attr_equiv %>%
+  kbl(col.names = c("Attribute", "Equivalence Value", "Unit"),
+      align = c("l", "c", "c")) %>%
+  kable_styling(font_size = 19) %>%
+  row_spec(0, bold = TRUE) %>% 
+  row_spec(c(1, 2), bold = TRUE, color = "#ED6D46")
+```
+
+:::
+:::
+
+<br>
+
+::: {style="font-size: 26px;"}
+1. **Smaller** value indicates higher efficiency.
+2. **Monetary** incentives are valued more in V2G than SMC.
+3. **Guaranteed** thresholds are in high efficiency, indicating range anxiety.
+4. Attribute equivalencies can be used to inform incentive design.
+:::

@@ -1,0 +1,157 @@
+## <span style="color: #FFB84D;">Study 2</span><br><br>Quantifying the supply of peak-shaving from controlled EV charging {.dark-centered .center}
+
+## Recall the SMC Peak-shaving
+
+::: {style="font-size: 32px;"}
+- SMC smooths out EV charging spike (called "Peak-shaving").
+- Electricity demand is controlled below capacity threshold.
+- It saves money and reduces pollution.
+:::
+
+![](/figs/study-1/education_1.png){fig-align="center" width="90%"}
+
+## Research Questions {style="line-height: 2;"}
+
+1. **Peak-shaving**: How much does peak-shaving from controlled EV charging cost utilities?
+
+2. **Variations:** How do peak-shaving results change based on regions, seasons, EV-to-house ratios, and enrollment rates.
+
+<br>
+
+::: {.centered-container}
+**Data collection** from NHTS, NREL, and U.S. Census.
+:::
+
+::: {.centered-container}
+Peak-shaving **simulation** using model from study 1.
+:::
+
+## Plan of Action {.smaller}
+
+### Step 1: Data Collection {style="font-size: 32px; color: #739C69;"}
+- **NHTS**: Charging behavior data
+- **NREL**: Household electricity consumption data
+- **U.S. Census**: Count of single family households
+- **Study 1**: MXL model of SMC enrollment utilities
+
+### Step 2: Simulation {style="font-size: 32px; color: #739C69;"}
+- Simulate grid demand profiles with different EV charging loads
+- Simulate peak load reduction under different levels of SMC enrollment
+
+### Step 3: Sensitivity Analysis {style="font-size: 32px; color: #739C69;"}
+- Compare the peak-shaving results of different scenarios
+- Summarize and provide policy implications
+
+## NHTS - National Household Travel Survey {.dark-centered .center}
+
+<br>
+
+Travel patterns of 26,000 vehicle owners.
+
+## Simulated EV Charging Profile {.light-centered}
+
+![](/figs/study-2/ev_charging_profile.png){fig-align="center" width=85% .purple-border}
+
+::: {style="font-size: 32px;"}
+Energy consumption and concurrent charging % of 10,000 EVs.
+:::
+
+## NREL - National Renewable Energy Lab {.dark-centered .center}
+
+<br>
+
+Data of household electricity consumption in each GEA region.
+
+## 18 GEA Regions {.light-centered}
+
+![](/figs/study-2/gea_map.png){fig-align="center" width="90%"}
+
+## CAISO as an Example {.light-centered}
+
+![](/figs/study-2/caiso_nrel.png){fig-align="center" width=100% .purple-border}
+
+::: {style="font-size: 32px;"}
+7.69M single-family homes, collected from U.S. Census.
+:::
+
+## Peak-shaving Simulation {.dark-centered .center}
+
+## Original Consumption Profile {.light-centered}
+
+::: {.column width="70%"}
+
+<br>
+
+![](/figs/study-2/caiso_profile_1.png){fig-align="center" width=85% .purple-border}
+:::
+
+::: {.column width="30%"}
+
+<br>
+
+<span style="color: #ED6D46; font-size: 36px">Assumptions</span>
+
+::: {style="font-size: 27px;"}
+- 200-mile range BEV.
+- Level 2 charger.
+- Peak: 10AM-12:00AM.
+- Valley: 12:00AM-7AM.
+- Battery: 20%-80%.
+- Auto-override.
+:::
+:::
+
+## Shifted Consumption with Peak-shaving {.light-centered}
+
+::: {.column width="70%"}
+
+<br>
+
+![](/figs/study-2/caiso_profile_2.png){fig-align="center" width=85% .purple-border}
+
+::: {style="font-size: 32px;"}
+90% SMC enrollment, EV-to-house ratio 1:1.
+:::
+:::
+
+::: {.column width="30%"}
+
+<br>
+
+<span style="color: #ED6D46; font-size: 36px">Assumptions</span>
+
+::: {style="font-size: 27px;"}
+- 200-mile range BEV.
+- Level 2 charger.
+- Peak: 10AM-12:00AM.
+- Valley: 12:00AM-7AM.
+- Battery: 20%-80%.
+- Auto-override.
+:::
+:::
+
+## MXL Model of Monthly Incentives {.light-centered}
+
+![](/figs/study-2/smc_monthly_sens_plot.png){fig-align="center" width="90%" .purple-border}
+
+## EV Peak Increase <span style="color: #ED6D46;">vs</span> Monthly Incentives
+
+![](/figs/study-2/ev_peak_increase_and_cost.png){fig-align="center" width="85%" .purple-border}
+
+::: {style="font-size: 32px;"}
+More incentives lead to higher SMC enrollment, thus more peak shaving.
+:::
+
+## Sensitivity Analysis {.dark-centered .center}
+
+## Different Scenarios {.light-centered .center}
+
+- All 18 GEA regions in all 4 seasons.
+- Varying EV-to-house ratios (1:4, 1:2, 1:1).
+- Varying SMC enrollment rates (from 0% to 100%).
+- Varying peak and valley windows.
+
+## Policy Implications {.light-centered .center}
+
+1. Utilities must plan a budget that scales with enrollment levels.
+2. Governments could get engaged (e.g. provide subsidies to offset the cost).

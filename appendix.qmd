@@ -1,0 +1,289 @@
+```{r}
+#| label: appendix
+#| include: false
+library(kableExtra)
+source("scripts.R")
+```
+
+## Appendix {.dark-centered .center}
+
+## SMC Scenario Analysis
+![](/figs/study-1/smc_scenario_plot.png){fig-align="center"}
+
+::: {style="font-size: 26px;"}
+1. **Flexibility** is highly valued.
+2. **Recurring** incentives are more important than one-time.
+3. Payment alone is not enough.
+:::
+
+::: {.notes}
+So, after analysis of all these individual features, we can combine them into programs. We call them "scenarios". I want to emphasize that the purpose of doing these evaluations is to wisely allocate the resources of the grid. Therefore, we need to maximize the enrollment of each program with least efforts.
+
+Here for SMC we have 3 scenarios. They are flexibility, recurring cash, and one-time cash designated.
+
+As we can see, for SMC, flexibility is highly valued, and recurring incentives are more important than one-time. So due to the range anxiety, payment alone is not enough. There should be a combination of flexibility and monetary incentives.
+:::
+
+## V2G Scenario Analysis
+![](/figs/study-1/v2g_scenario_plot.png){fig-align="center"}
+
+::: {style="font-size: 26px;"}
+1. Still, **recurring** incentives are more important than one-time.
+2. But **flexibility** is not as important compared with SMC.
+3. Owners are willing to leverage BEV as a source of income.
+:::
+
+::: {.notes}
+For V2G programs, recurring incentives are also more important than one-time. But flexibility is compromised since owners are willing to use their BEVs as a source of income. So the V2G programs are more incentive powered than SMC programs.
+:::
+
+## Smart Charging Enrollment Simulator {style="text-align: center;"}
+
+[![](/figs/study-1/simulator.png){width="100%" fig-align="center" style="border: 2px solid #5654A2;"}](https://gwuvehicle.shinyapps.io/enrollment_simulator/)
+
+::: {.notes}
+Here we've made a smart charging enrollment simulator. We can play around with it and see the anticipated enrollment of each program, with different feature values.
+
+1. More enrollment increase in SMC: Guaranteed threshold from 60% to 100%.
+2. More enrollment increase in V2G: Recurring cash from $2 to $20.
+:::
+
+## SMC Logit Model {.smaller}
+
+$$
+\begin{align*}
+u_j = \beta_1 x_j^{\text{enroll_cash}} + \beta_2 x_j^{\text{monthly_cash}} + \beta_3 \delta_j^{\text{override_allowed}} + \beta_4 x_j^{\text{num_overrides}} \notag \\ + \beta_5 x_j^{\text{min_threshold}} + \beta_6 x_j^{\text{guaranteed_threshold}} + \beta_7 \delta_j^{\text{no_choice}} + \epsilon_j
+\end{align*}
+$$
+
+::: {style="border: 2px solid #333; border-radius: 8px;"}
+
+```{r}
+smc_coef <- data.frame(
+  Attribute = c("Enrollment Cash", "Monthly Cash", "Override Days", 
+                "Override Flag", "Minimum Threshold", "Guaranteed Threshold", "No Choice"),
+  `Coef.` = c("β₁", "β₂", "β₃", "β₄", "β₅", "β₆", "β₇"),
+  `Est.` = c(0.0037, 0.0728, 0.1191, 0.4357, 0.0044, 0.0490, 2.8984),
+  SE = c(0.0002, 0.0031, 0.0140, 0.0654, 0.0023, 0.0028, 0.2215),
+  Level = c("50, 100, 200, 300", "2, 5, 10, 15, 20", "0, 1, 3, 5", 
+            "Yes, No", "20, 30, 40", "60, 70, 80", "-"),
+  Unit = c("USD", "USD", "Days", "-", "%", "%", "-")
+)
+
+smc_table <- kable(smc_coef, booktabs = TRUE, 
+                   align = c("l", "c", "c", "c", "c", "c"),
+                   escape = FALSE) %>%
+  kable_styling(latex_options = c("striped", "scale_down")) %>%
+  row_spec(0, bold = TRUE) %>%
+  add_header_above(c(" " = 6))
+
+smc_table
+```
+
+:::
+
+## V2G Logit Model {.smaller}
+
+$$
+\begin{align*}
+u_j = \beta_1 x_j^{\text{enroll_cash}} + \beta_2 x_j^{\text{occur_cash}} + \beta_3 x_j^{\text{num_occurrences}} + \beta_4 x_j^{\text{lower_threshold}} \notag \\ + \beta_5 x_j^{\text{guaranteed_threshold}} + \beta_6 \delta_j^{\text{no_choice}} + \epsilon_j
+\end{align*}
+$$
+
+::: {style="border: 2px solid #333; border-radius: 8px;"}
+
+```{r}
+v2g_coef <- data.frame(
+  Attribute = c("Enrollment Cash", "Occurrence Cash", "Monthly Occurrence", 
+                "Lower Threshold", "Guaranteed Threshold", "No Choice"),
+  `Coef.` = c("β₁", "β₂", "β₃", "β₄", "β₅", "β₆"),
+  `Est.` = c(0.0051, 0.0972, 0.1595, 0.0263, 0.0368, 2.4283),
+  SE = c(0.0003, 0.0045, 0.0262, 0.0036, 0.0037, 0.1964),
+  Level = c("50, 100, 200, 300", "2, 5, 10, 15, 20", "1, 2, 3, 4", 
+            "20, 30, 40", "60, 70, 80", "-"),
+  Unit = c("USD", "USD", "Times", "%", "%", "-")
+)
+
+v2g_table <- kable(v2g_coef, booktabs = TRUE, 
+                   align = c("l", "c", "c", "c", "c", "c"),
+                   escape = FALSE) %>%
+  kable_styling(latex_options = c("striped", "scale_down")) %>%
+  row_spec(0, bold = TRUE) %>%
+  add_header_above(c(" " = 6))
+
+v2g_table
+```
+
+:::
+
+
+## `surveydown` Feature Highlights {.light-centered .center}
+
+<br>
+
+::: {.grid-container style="height: 20vh;"}
+::: {.centered-container style="width: 500px;"}
+Question types
+:::
+
+::: {.centered-container style="width: 500px;"}
+Conditional logic
+:::
+:::
+
+## 12 Built-in Question Types {.light-centered .center}
+
+::: {.four-by-three-grid}
+`text`
+
+`textarea`
+
+`numeric`
+
+`mc`
+
+`mc_multiple`
+
+`mc_buttons`
+
+`mc_multiple_buttons`
+
+`select`
+
+`slider`
+
+`slider_numeric`
+
+`date`
+
+`daterange`
+:::
+
+## Question Type: `text` {.light-centered .center}
+
+<br>
+
+::: {.column style="width: 48%; font-size: 0.7em;"}
+
+```{r}
+#| results: 'asis'
+question_text()
+```
+
+:::
+
+::: {.column style="width: 4%; font-size: 0.7em; text-align: center;"}
+
+<br>
+
+### -->
+:::
+
+::: {.column style="width: 48%; margin-left: -10px; margin-top: -10px;"}
+![](/figs/study-3/question-text.png){width=100%}
+:::
+
+## Question Type: `mc_buttons` {.light-centered .center}
+
+<br>
+
+::: {.column style="width: 48%; font-size: 0.7em; margin-top: -10px;"}
+
+<br>
+
+```{r}
+#| results: 'asis'
+question_mc_buttons()
+```
+
+:::
+
+::: {.column style="width: 4%; font-size: 0.7em; text-align: center;"}
+
+<br>
+<br>
+<br>
+<br>
+
+### -->
+:::
+
+::: {.column style="width: 48%; margin-left: -10px; margin-top: -30px;"}
+![](/figs/study-3/question-mc-buttons.png){width=100%}
+:::
+
+## Conditional logic {.light-centered .center}
+
+<br>
+
+::: {.grid-container style="height: 30vh;"}
+::: {.centered-container style="width: 500px;"}
+**Conditional showing**
+:::
+
+::: {.centered-container style="width: 500px;"}
+Conditional skipping
+:::
+
+::: {.centered-container style="width: 500px;"}
+Conditional stopping
+:::
+:::
+
+## Conditional showing - `sd_show_if()` {.light-centered}
+
+<br>
+
+![](/figs/study-3/conditional-showing.gif){width=50% .purple-border}
+
+## Conditional showing - `sd_show_if()` {.light-centered}
+
+<br>
+
+::: {.column style="width: 49%; font-size: 0.7em;"}
+
+### `survey.qmd` {style="text-align: center;"}
+
+```{r}
+#| results: 'asis'
+show_if_survey()
+```
+
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column .fragment style="width: 49%; font-size: 0.7em;"}
+
+### `app.R` {style="text-align: center;"}
+
+```{r}
+#| results: 'asis'
+show_if_app()
+```
+
+::: {.bubble-top style="text-align: center; display: block; transform: none; top: 40%;"}
+Condition ~ Target
+
+<br>
+
+"If {condition}, then show {target}"
+:::
+:::
+
+## Generate surveys with LLMs! {.light-centered .center}
+
+![](/figs/study-3/llm.gif){fig-align="center" width=80% .purple-border}
+
+## The companion [`sdstudio`](https://github.com/surveydown-dev/sdstudio/) package {.light-centered}
+
+![](/figs/study-3/sdstudio-build.gif){fig-align="center" width=90% .purple-border}
+
+## The companion [`sdstudio`](https://github.com/surveydown-dev/sdstudio/) package {.light-centered}
+
+![](/figs/study-3/sdstudio-preview.gif){fig-align="center" width=90% .purple-border}
+
+## The companion [`sdstudio`](https://github.com/surveydown-dev/sdstudio/) package {.light-centered}
+
+![](/figs/study-3/sdstudio-data.gif){fig-align="center" width=90% .purple-border}

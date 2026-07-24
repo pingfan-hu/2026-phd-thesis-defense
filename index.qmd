@@ -1,0 +1,33 @@
+{{< include /intro.qmd >}}
+
+{{< include /study-1.qmd >}}
+
+{{< include /study-2.qmd >}}
+
+{{< include /study-3.qmd >}}
+
+## Research Contributions
+
+<br>
+
+- **Study 1:** First *large N* survey study of EV owner *preference sensitivities* to smart charging. Introduces *attribute equivalencies* for incentive design.
+- **Study 2:** Quantifies grid supply curves for *peak-shaving*, considering regions, seasons, EV-to-house ratios, and enrollment rates.
+- **Study 3:** `surveydown`, a free open-source survey platform for programmable, reproducible survey designs.
+
+::: {.notes}
+I start with a survey research on smart charging, followed by a nation-wide grid simulation, and a survey software.
+
+I hope these studies could benefit sustainable transportation, and give persistent contributions for future research.
+:::
+
+## Timeline of Study 2 {.light-centered .center}
+
+- **Nov 2025**: Sensitivity analysis on various scenarios.
+- **Dec 2025**: Complete & submit manuscript for peer review.
+- **Mar 2026**: Defend dissertation.
+
+## Thanks for listening! {.light-centered .center}
+
+{{< include /appendix.qmd >}}
+
+## Reference List
