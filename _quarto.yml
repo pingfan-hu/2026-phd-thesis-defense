@@ -2,8 +2,8 @@ project:
   type: website
   output-dir: _site
 
-pagetitle: "PhD Proposal"
-title: "PhD Proposal Defense:<br><span style='font-size: 0.7em;'>Electric Vehicle Smart Charging Adoption,<br>Grid Peak-Shaving Quantification, and<br>The `surveydown` Survey Platform</span>"
+pagetitle: "PhD Thesis Defense"
+title: "PhD Thesis Defense:<br><span style='font-size: 0.7em;'>Electric Vehicle Smart Charging Adoption,<br>Grid Peak-Shaving Quantification, and<br>The `surveydown` Survey Platform</span>"
 author: "<br>**Pingfan Hu**<br>George Washington University"
 
 format:
@@ -17,7 +17,7 @@ format:
     auto-stretch: false
     preview-links: auto
     logo: figs/logo.png
-    footer: "<a href='http://pingfanhu.com'>Pingfan Hu</a> - PhD Proposal Defense"
+    footer: "<a href='http://pingfanhu.com'>Pingfan Hu</a> - PhD Thesis Defense"
     link-external-newwindow: true
     link-external-icon: false
     center-title-slide: true

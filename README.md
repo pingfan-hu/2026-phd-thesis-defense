@@ -1,6 +1,6 @@
-Slides for my talk on PhD thesis proposal
+Slides for my talk on PhD thesis defense
 
-*PhD Proposal Defense:
+*PhD Thesis Defense:
 Electric Vehicle Smart Charging Adoption,
 Grid Peak-Shaving Quantification, and
 The `surveydown` Survey Platform*
