@@ -12,6 +12,7 @@ format:
     theme: styles/theme.scss
     css: styles/slides.css
     bibliography: bibliography.bib
+    csl: styles/apa.csl
     slide-number: true
     embed-resources: false
     auto-stretch: false

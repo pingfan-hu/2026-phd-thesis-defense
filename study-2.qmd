@@ -1,4 +1,21 @@
-## <span style="color: #FFB84D;">Study 2</span><br><br>Quantifying the supply of peak-shaving from controlled EV charging {.dark-centered .center}
+```{r}
+#| label: setup-study-2
+#| include: false
+library(tidyverse)
+library(kableExtra)
+```
+
+## <span style="color: #FFB84D;">Study 2</span><br>Quantifying the Peak-Shaving Potential and Cost Efficiency of BEV Supplier-Managed Charging {.dark-centered .center}
+
+<br>
+
+::: {style="font-size: 30px;"}
+Submitted to *Environmental Research: Infrastructure and Sustainability*
+
+<br>
+
+Manuscript ERIS-100972, awaiting review
+:::
 
 ## Recall the SMC Peak-shaving
 
@@ -10,148 +27,509 @@
 
 ![](/figs/study-1/education_1.png){fig-align="center" width="90%"}
 
+::: {.notes}
+Quick recall from Study 1: SMC shifts EV charging away from the evening peak, so the total demand stays below the capacity threshold.
+:::
+
+## Prior studies assume enrollment is high and free {style="line-height: 1.5;"}
+
+1. Most grid studies **assume** optimal or near-100% participation [@tarroja_importance_2015], <span style="color: #739C69">but real pilots enroll far fewer</span>.
+2. Enrollment is **not free**: utilities must pay incentives [@bailey_show_2023], <span style="color: #739C69">yet costs are rarely counted</span>.
+3. Few studies compare peak-shaving **across grid regions** with different load shapes.
+
+<br>
+
+::: {.centered-container}
+We connect **consumer enrollment** with **grid simulation**.
+:::
+
+::: {.notes}
+The technical potential of managed charging is well documented, but most studies assume everyone participates for free. In reality, participation depends on incentives, and incentives cost money. That's the gap this study fills: we bring the empirical enrollment model from Study 1 into a grid-scale simulation.
+:::
+
 ## Research Questions {style="line-height: 2;"}
 
-1. **Peak-shaving**: How much does peak-shaving from controlled EV charging cost utilities?
+1. **Peak-shaving**: How much can SMC reduce peak demand in contrasting grid regions?
 
-2. **Variations:** How do peak-shaving results change based on regions, seasons, EV-to-house ratios, and enrollment rates.
+2. **Cost efficiency**: How much does peak shaving cost per unit, and is more enrollment always better?
 
 <br>
 
 ::: {.centered-container}
-**Data collection** from NHTS, NREL, and U.S. Census.
+**Scenario-based simulation** for CAISO and NYISO.
 :::
 
 ::: {.centered-container}
-Peak-shaving **simulation** using model from study 1.
+**Enrollment model**: incentives vs participation.
 :::
 
-## Plan of Action {.smaller}
-
-### Step 1: Data Collection {style="font-size: 32px; color: #739C69;"}
-- **NHTS**: Charging behavior data
-- **NREL**: Household electricity consumption data
-- **U.S. Census**: Count of single family households
-- **Study 1**: MXL model of SMC enrollment utilities
-
-### Step 2: Simulation {style="font-size: 32px; color: #739C69;"}
-- Simulate grid demand profiles with different EV charging loads
-- Simulate peak load reduction under different levels of SMC enrollment
-
-### Step 3: Sensitivity Analysis {style="font-size: 32px; color: #739C69;"}
-- Compare the peak-shaving results of different scenarios
-- Summarize and provide policy implications
-
-## NHTS - National Household Travel Survey {.dark-centered .center}
-
-<br>
-
-Travel patterns of 26,000 vehicle owners.
-
-## Simulated EV Charging Profile {.light-centered}
-
-![](/figs/study-2/ev_charging_profile.png){fig-align="center" width=85% .purple-border}
-
-::: {style="font-size: 32px;"}
-Energy consumption and concurrent charging % of 10,000 EVs.
-:::
-
-## NREL - National Renewable Energy Lab {.dark-centered .center}
-
-<br>
-
-Data of household electricity consumption in each GEA region.
-
-## 18 GEA Regions {.light-centered}
+## 18 GEA regions in the USA {.light-centered}
 
 ![](/figs/study-2/gea_map.png){fig-align="center" width="90%"}
 
-## CAISO as an Example {.light-centered}
-
-![](/figs/study-2/caiso_nrel.png){fig-align="center" width=100% .purple-border}
-
-::: {style="font-size: 32px;"}
-7.69M single-family homes, collected from U.S. Census.
+::: {.notes}
+The U.S. grid is divided into 18 Generation and Emissions Assessment regions, as defined by NREL's Cambium dataset. Our nationwide enrollment model applies to any of them.
 :::
 
-## Peak-shaving Simulation {.dark-centered .center}
+## 18 GEA regions in the USA {.light-centered}
 
-## Original Consumption Profile {.light-centered}
+![](/figs/study-2/gea_map_highlight.png){fig-align="center" width="90%"}
 
-::: {.column width="70%"}
+::: {.notes}
+For the grid simulation, we zoom into two contrasting regions: CAISO in California and NYISO in New York.
+:::
+
+## {.light-centered .center}
+
+::: {style="border: 2px solid #333; border-radius: 8px; padding: 6px 18px;"}
+
+<table style="width: 100%; border-collapse: collapse; text-align: center; font-size: 30px; margin: 0;">
+  <thead>
+    <tr style="background-color: #F3F1E8;">
+      <th style="width: 30%; padding: 14px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333;"></th>
+      <th style="width: 28%; padding: 14px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 32px; color: #ED6D46;">CAISO</th>
+      <th style="width: 42%; padding: 14px 10px; border-bottom: 2px solid #333; font-size: 32px; color: #5654A2;">NYISO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 14px 10px; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Single Families</strong></td>
+      <td style="padding: 14px 10px; border-right: 1px solid #333;">7.69 million</td>
+      <td style="padding: 14px 10px;">3.16 million</td>
+    </tr>
+    <tr>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Energy Source</strong></td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Solar</td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333;">Hydro</td>
+    </tr>
+    <tr>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Net load shape</strong></td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Duck curve</td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333;">Flat profile</td>
+    </tr>
+    <tr>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Seasonal effect</strong></td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Minimal</td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333;">Strong in winter (heating)</td>
+    </tr>
+  </tbody>
+</table>
+
+:::
 
 <br>
 
-![](/figs/study-2/caiso_profile_1.png){fig-align="center" width=85% .purple-border}
+::: {style="text-align: center; font-size: 28px;"}
+Both **lead in BEV adoption** --- with **contrasting grid structures**.
 :::
 
-::: {.column width="30%"}
+::: {.notes}
+We picked California and New York because they're both BEV leaders but structurally opposite grids. CAISO has the solar duck curve with a steep evening ramp, and it behaves essentially the same across all four seasons. NYISO is flatter, relies more on dispatchable hydro, and is season-sensitive: winter overnight heating keeps the nighttime load elevated, which matters later in the results. This contrast lets us see how grid context shapes SMC performance.
+:::
+
+## Data Sources {.light-centered .center}
 
 <br>
 
-<span style="color: #ED6D46; font-size: 36px">Assumptions</span>
+::: {style="border: 2px solid #333; border-radius: 8px; padding: 6px 18px;"}
 
-::: {style="font-size: 27px;"}
-- 200-mile range BEV.
-- Level 2 charger.
-- Peak: 10AM-12:00AM.
-- Valley: 12:00AM-7AM.
-- Battery: 20%-80%.
-- Auto-override.
+<table style="width: 100%; border-collapse: collapse; text-align: center; font-size: 28px; margin: 0;">
+  <thead>
+    <tr style="background-color: #F3F1E8;">
+      <th style="width: 26%; padding: 12px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 32px; color: #ED6D46;">Source</th>
+      <th style="width: 38%; padding: 12px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 32px; color: #739C69;">Provides</th>
+      <th style="width: 36%; padding: 12px 10px; border-bottom: 2px solid #333; font-size: 32px; color: #5654A2;">Role in Simulation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 12px 10px; border-right: 1px solid #333;">2022 NHTS</td>
+      <td style="padding: 12px 10px; border-right: 1px solid #333;">Real trip records nationwide</td>
+      <td style="padding: 12px 10px;">Charge time &amp; energy needs</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">2025 GridStatus.io</td>
+      <td style="padding: 12px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Net load time series</td>
+      <td style="padding: 12px 10px; border-top: 1px solid #333;">Regional grid baselines</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">2025 U.S. Census</td>
+      <td style="padding: 12px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Single-family counts</td>
+      <td style="padding: 12px 10px; border-top: 1px solid #333;">Scale to total fleet energy</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Study 1</td>
+      <td style="padding: 12px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Enrollment curve</td>
+      <td style="padding: 12px 10px; border-top: 1px solid #333;">Cost efficiency analysis</td>
+    </tr>
+  </tbody>
+</table>
+
+:::
+
+::: {.notes}
+Four data sources: NHTS trips define when vehicles travel and how much energy they need; GridStatus.io gives us actual 2025 net load for both regions; the Census scales our 10,000 simulated vehicles up to regional fleet sizes; and crucially, the discrete choice experiment from Study 1 translates incentive dollars into enrollment rates. Net load means total consumption minus variable renewables, so it's the demand that dispatchable generation must serve.
+:::
+
+## Simulation Setup {.light-centered .center}
+
+::: {.columns}
+::: {.column style="padding-top: 0.5em; width: 48%;"}
+
+::: {style="border: 2px solid #333; border-radius: 8px; padding: 4px 14px;"}
+
+<table style="width: 100%; border-collapse: collapse; text-align: center; font-size: 26px; margin: 0;">
+  <thead>
+    <tr style="background-color: #F3F1E8;">
+      <th colspan="2" style="padding: 12px 10px; border-bottom: 2px solid #333; font-size: 30px; color: #ED6D46; text-align: center;">Vehicle &amp; Charging</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 45%; padding: 12px 10px; border-right: 1px solid #333;">BEV range</td>
+      <td style="width: 55%; padding: 12px 10px;">200 miles</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Charging</td>
+      <td style="padding: 12px 10px; border-top: 1px solid #333;">Level 2 (6.48 kW)</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Battery SOC</td>
+      <td style="padding: 12px 10px; border-top: 1px solid #333;">20% -- 80%</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Travel needs</td>
+      <td style="padding: 12px 10px; border-top: 1px solid #333;">Guaranteed</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Overrides</td>
+      <td style="padding: 12px 10px; border-top: 1px solid #333;">2 -- 3 per month</td>
+    </tr>
+  </tbody>
+</table>
+
 :::
 :::
 
-## Shifted Consumption with Peak-shaving {.light-centered}
+::: {.column style="width: 4%;"}
+:::
 
-::: {.column width="70%"}
+::: {.column style="padding-top: 0.5em; width: 48%;"}
+
+::: {style="border: 2px solid #333; border-radius: 8px; padding: 4px 14px;"}
+
+<table style="width: 100%; border-collapse: collapse; text-align: center; font-size: 26px; margin: 0;">
+  <thead>
+    <tr style="background-color: #F3F1E8;">
+      <th colspan="2" style="padding: 12px 10px; border-bottom: 2px solid #333; font-size: 30px; color: #739C69; text-align: center;">Program &amp; Scenarios</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 45%; padding: 12px 10px; border-right: 1px solid #333;">BEV : Household</td>
+      <td style="width: 55%; padding: 12px 10px;">1 : 1</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Enrollment</td>
+      <td style="padding: 12px 10px; border-top: 1px solid #333;">0% -- 100%</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Valley start</td>
+      <td style="padding: 12px 10px; border-top: 1px solid #333;">8 PM -- 12 AM</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Best valley</td>
+      <td style="padding: 12px 10px; border-top: 1px solid #333;"><strong>11 PM</strong></td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Time spans</td>
+      <td style="padding: 12px 10px; border-top: 1px solid #333;">Year / day / season</td>
+    </tr>
+  </tbody>
+</table>
+
+:::
+:::
+:::
+
+::: {.notes}
+Key assumptions: 200-mile BEVs on Level 2 home charging, batteries kept between 20 and 80 percent, and travel is never compromised — sessions that can't be shifted stay in place as override events, which stay within 2 to 3 per vehicle per month. We simulate the full range of enrollment levels and five time-of-use window configurations; the 11 PM valley start wins in both regions, so all reported results use it.
+:::
+
+## Workflow {.light-centered}
+
+![](/figs/study-2/fig_2_8_workflow.png){fig-align="center" width="80%" .purple-border}
+
+::: {style="font-size: 28px;"}
+**Stage 1**: Peak-shaving model sweeps thousands of scenarios.<br>
+**Stage 2**: Cost efficiency joins results with Study 1 enrollment curves.
+:::
+
+::: {.notes}
+The framework has two stages. Stage one is the peak-shaving model: three data sources feed a simulation that sweeps TOU window configurations, adoption rates, date ranges, and enrollment levels. Stage two takes the best-performing outcomes and joins them with the consumer enrollment curve from Study 1 to compute cost efficiency frontiers.
+:::
+
+## Step 1: BEV Charging Load Profile {.light-centered}
+
+![](/figs/study-2/fig_2_10_step_1_ev_load.png){fig-align="center" width="85%" .purple-border}
+
+::: {style="font-size: 30px;"}
+Unmanaged charging of 10,000 simulated vehicles **peaks at 7 PM**.
+:::
+
+::: {.notes}
+Step one builds the unmanaged BEV charging load from NHTS travel patterns. People come home in the evening and plug in, so the load peaks at 7 PM — exactly on top of the existing grid evening peak.
+:::
+
+## Step 2: BEV Load Peak Shaving {.light-centered}
+
+![](/figs/study-2/fig_2_11_step_2_ev_peak_shaving.png){fig-align="center" width="85%" .purple-border}
+
+::: {style="font-size: 28px;"}
+**Five configurations** with different peak/valley windows.
+:::
+
+::: {.notes}
+Two messages in this plot. First, besides the baseline, there are five configurations that differ only in when the valley window opens — from 8 PM to 12 AM — so we can directly compare which peak/valley allocation shaves the most. Second, this is drawn at 50% enrollment, not 0 or 100, so you can see the interim shifting: half of the fleet's charging has moved into the valley, and the other half still charges as usual. Mechanically, from 10 AM charging is suppressed unless the battery would fall below 20% or tomorrow's travel would be at risk, and deferred demand is delivered at maximum rate once the valley opens.
+:::
+
+## Step 3: Grid Net Load Profile {.light-centered}
+
+![](/figs/study-2/fig_2_12_step_3_grid_net_load.png){fig-align="center" width="75%" .purple-border}
+
+::: {style="font-size: 28px;"}
+CAISO 2025 average: solar-driven **midday dip**, steep **evening ramp**.<br>
+Profiles plotted from 7 AM to keep the evening peak centered.
+:::
+
+::: {.notes}
+Step three is the grid baseline. CAISO's 2025 average net load shows the classic duck curve: a midday dip from solar and a steep evening ramp. The evening peak and overnight valley together define the opportunity window for SMC. We plot days starting at 7 AM so the peak sits in the center and the valley forms one contiguous block on the right.
+:::
+
+## Step 4: Combined Load & Peak Shaving {.light-centered}
+
+![](/figs/study-2/fig_2_13_step_4_grid_peak_shaving.png){fig-align="center" width="75%" .purple-border}
+
+::: {style="font-size: 28px;"}
+BEV load scaled to fleet size and stacked on net load.<br>
+Black: 0% enrollment. Green: 100% enrollment.
+:::
+
+::: {.notes}
+Step four stacks the scaled BEV load on the grid baseline. Each simulated vehicle represents 769 vehicles in CAISO and 316 in NYISO. The black line is total load with no SMC; the green line is full enrollment — the evening peak drops and the load moves into the overnight valley.
+:::
+
+## Enrollment Curve from Study 1 {.light-centered}
+
+![](/figs/study-2/fig_2_9_smc_monthly_incentive.png){fig-align="center" width="65%" .purple-border}
+
+::: {style="font-size: 28px;"}
+**30%** enroll voluntarily at \$0 → **60%** at \$20/month → **100%** requires \$85/month.
+:::
+
+::: {.notes}
+This is the bridge between the two studies. The mixed logit model from Study 1, holding non-monetary attributes fixed, gives the enrollment rate as a function of the monthly incentive. About 30% would participate with no payment at all, \$20 a month gets you to about 60%, but full enrollment would take \$85 per household per month. The curve is concave — every additional dollar buys less enrollment — and since utilities pay a uniform incentive to everyone, total program cost grows non-linearly.
+:::
+
+## Step 5: Cost Efficiency Analysis {.light-centered}
+
+![](/figs/study-2/fig_2_14_step_5_incentive_vs_peak_reduction.png){fig-align="center" width="70%" .purple-border}
+
+::: {style="font-size: 28px;"}
+Each dot is a 10% enrollment increment.<br>
+Program cost = incentive × number of enrolled households.
+:::
+
+::: {.notes}
+Step five joins the peak-shaving results with the enrollment curve. Each dot along a curve is a 10% enrollment step. The dots spread out along the cost axis at higher enrollment: attracting marginal participants requires raising the payment for all existing enrollees, so marginal costs rise sharply.
+:::
+
+## Results {.dark-centered .center}
+
+## Annual Average Peak Shaving {.light-centered}
+
+::: {.columns}
+::: {.column}
+![](/figs/study-2/fig_2_1_caiso_avg.png){fig-align="center" width="100%" .purple-border}
+
+::: {style="text-align: center; font-size: 28px;"}
+**CAISO: −3.7 GW** (30.5 → 26.8 GW)<br>a **12.1%** reduction
+:::
+:::
+
+::: {.column}
+![](/figs/study-2/fig_2_1_nyiso_avg.png){fig-align="center" width="100%" .purple-border}
+
+::: {style="text-align: center; font-size: 28px;"}
+**NYISO: −1.6 GW** (21.2 → 19.6 GW)<br>a **7.5%** reduction
+:::
+:::
+:::
+
+::: {style="text-align: center; font-size: 28px;"}
+At 100% SMC enrollment, relative to unmanaged charging.
+:::
+
+::: {.notes}
+On an annual average day with full enrollment, SMC shaves 3.7 gigawatts off CAISO's evening peak — about 12% — and 1.6 gigawatts in NYISO, about 7.5%. CAISO does better both because it has more households and because its deep overnight valley absorbs the deferred charging.
+:::
+
+## Extreme Peak-Shaving Days {.light-centered}
+
+::: {.columns}
+::: {.column}
+![](/figs/study-2/fig_2_2_caiso_extreme_1.png){fig-align="center" width="100%" .purple-border}
+
+::: {style="text-align: center; font-size: 26px;"}
+CAISO best day (Jun 1):<br>**−5.4 GW (14.4%)**
+:::
+:::
+
+::: {.column}
+![](/figs/study-2/fig_2_2_caiso_extreme_2.png){fig-align="center" width="100%" .purple-border}
+
+::: {style="text-align: center; font-size: 26px;"}
+CAISO worst day (Dec 13):<br>**−1.9 GW (6.2%)**
+:::
+:::
+:::
+
+::: {style="text-align: center; font-size: 26px;"}
+NYISO: best day (Jul 13) **−2.2 GW (7.9%)**; worst day (Nov 8) **−0.8 GW (4.5%)**.<br>
+Days ranked by *achievable shaving*, not by highest demand.
+:::
+
+::: {.notes}
+Performance varies a lot day to day. CAISO's best day shaves 5.4 gigawatts, its worst under 2. NYISO ranges from 2.2 down to 0.8. Important nuance: extreme days are ranked by how much peak can be shaved, not by how high the peak is — on heat-wave days, air conditioning dominates and EV charging is a small share, so SMC has less leverage.
+:::
+
+## Cost Efficiency: Diminishing Returns {.light-centered}
+
+::: {.columns}
+::: {.column}
+![](/figs/study-2/fig_2_4_caiso_efficiency_extreme.png){fig-align="center" width="100%" .purple-border}
+
+::: {style="text-align: center; font-size: 26px;"}
+CAISO efficiency frontier
+:::
+:::
+
+::: {.column}
+![](/figs/study-2/fig_2_4_nyiso_efficiency_extreme.png){fig-align="center" width="100%" .purple-border}
+
+::: {style="text-align: center; font-size: 26px;"}
+NYISO efficiency frontier
+:::
+:::
+:::
+
+::: {style="text-align: center; font-size: 28px; color: #E74C3C;"}
+**Moderate enrollment (30--50%) captures most of the peak reduction<br>at a fraction of the cost of full enrollment.**
+:::
+
+::: {.notes}
+Here's the central result. Each dot is a 10% enrollment step, and the dots stretch out along the cost axis — the last increments of enrollment are extremely expensive. Moderate enrollment, 30 to 50 percent, captures most of the achievable peak reduction at a fraction of the cost. And on about 15% of CAISO days, pushing enrollment too high actually reconstitutes a new overnight peak.
+:::
+
+## Seasonal Patterns {.light-centered}
+
+::: {.columns}
+::: {.column}
+![](/figs/study-2/fig_2_5_caiso_seasonal_2.png){fig-align="center" width="100%" .purple-border}
+
+::: {style="text-align: center; font-size: 26px;"}
+CAISO summer: peak 34.3 GW, **−3.7 GW**
+:::
+:::
+
+::: {.column}
+![](/figs/study-2/fig_2_6_nyiso_seasonal_4.png){fig-align="center" width="100%" .purple-border}
+
+::: {style="text-align: center; font-size: 26px;"}
+NYISO winter: overnight heating load<br>compresses the valley, **−1.4 GW**
+:::
+:::
+:::
+
+::: {style="text-align: center; font-size: 28px;"}
+CAISO shaves **3.5--4.0 GW in every season**; NYISO shaves 1.5--2.0 GW,<br>with winter the weakest season.
+:::
+
+::: {.notes}
+Seasonally, CAISO is remarkably consistent — 3.5 to 4 gigawatts in every season, because the solar-shaped profile keeps the peak-to-valley gap wide year-round. NYISO's winter is the exception: overnight space heating keeps the valley elevated, leaving less room for deferred charging.
+:::
+
+## Seasonal Cost Efficiency {.light-centered}
+
+::: {.columns}
+::: {.column}
+![](/figs/study-2/fig_2_7_caiso_efficiency_seasonal.png){fig-align="center" width="100%" .purple-border}
+
+::: {style="text-align: center; font-size: 26px;"}
+CAISO: all four seasons **overlap**
+:::
+:::
+
+::: {.column}
+![](/figs/study-2/fig_2_7_nyiso_efficiency_seasonal.png){fig-align="center" width="100%" .purple-border}
+
+::: {style="text-align: center; font-size: 26px;"}
+NYISO: **winter diverges**, less shaving per dollar
+:::
+:::
+:::
+
+::: {style="text-align: center; font-size: 28px;"}
+CAISO programs can run year-round at consistent efficiency;<br>NYISO utilities should account for reduced winter effectiveness.
+:::
+
+::: {.notes}
+The efficiency frontiers by season tell the same story: CAISO's four curves nearly overlap, so a year-round program delivers consistent value. NYISO's winter curve sits below the others at every enrollment level — utilities there may need seasonal enrollment targets or incentive levels.
+:::
+
+## How Do Real Programs Compare? {.smaller}
 
 <br>
 
-![](/figs/study-2/caiso_profile_2.png){fig-align="center" width=85% .purple-border}
+```{r}
+real_programs <- tibble(
+  Program = c(
+    "PCE EV Managed Charging (CAISO)",
+    "MCE Sync (CAISO)",
+    "Con Edison SmartCharge (NYISO)"
+  ),
+  `Observed Outcome` = c(
+    "~4% enrollment overall; 10.6% at $40/month",
+    "~10% enrollment; −90% charging in 4-9 PM window",
+    "100 W/vehicle peak reduction vs. ~500 W we predict at full enrollment"
+  )
+)
 
-::: {style="font-size: 32px;"}
-90% SMC enrollment, EV-to-house ratio 1:1.
-:::
-:::
-
-::: {.column width="30%"}
+real_programs %>%
+  kable(escape = FALSE, align = c("l", "l")) %>%
+  kable_styling(position = "center", font_size = 26) %>%
+  row_spec(0, bold = TRUE)
+```
 
 <br>
 
-<span style="color: #ED6D46; font-size: 36px">Assumptions</span>
-
-::: {style="font-size: 27px;"}
-- 200-mile range BEV.
-- Level 2 charger.
-- Peak: 10AM-12:00AM.
-- Valley: 12:00AM-7AM.
-- Battery: 20%-80%.
-- Auto-override.
-:::
+::: {style="font-size: 28px;"}
+1. Deployed programs sit **far below** the 30--50% cost-effective range.
+2. Stated-preference enrollment may be **optimistic** → our costs are a lower bound.
+3. Field evidence: **85%** stay enrolled a full year; overrides only **2.3%** of consumption.
 :::
 
-## MXL Model of Monthly Incentives {.light-centered}
-
-![](/figs/study-2/smc_monthly_sens_plot.png){fig-align="center" width="90%" .purple-border}
-
-## EV Peak Increase <span style="color: #ED6D46;">vs</span> Monthly Incentives
-
-![](/figs/study-2/ev_peak_increase_and_cost.png){fig-align="center" width="85%" .purple-border}
-
-::: {style="font-size: 32px;"}
-More incentives lead to higher SMC enrollment, thus more peak shaving.
+::: {.notes}
+Benchmarking against deployed programs: real pilots enroll 4 to 10 percent — well below the cost-effective range our simulation identifies, and consistent with hypothetical bias in stated-preference data. So our cost estimates should be read as a lower bound. On the reassuring side, field trials show 85% of drivers stay on managed tariffs for a full year and overrides are rare, so attrition risk is bounded.
 :::
 
-## Sensitivity Analysis {.dark-centered .center}
+## Key Takeaways {.light-centered .center}
 
-## Different Scenarios {.light-centered .center}
+1. SMC delivers **meaningful peak shaving**: up to 3.7 GW (CAISO) and 1.6 GW (NYISO) on an average day at full enrollment.
+2. **Regional structure matters**: CAISO's deep solar valley absorbs shifted load; NYISO's winter heating compresses it.
+3. **Moderate enrollment (30--50%) is optimal** — full enrollment costs far more and can create a new overnight peak.
+4. Efficiency frontiers **omit co-benefits** (emissions, battery life, avoided capacity) → they are a lower bound on SMC value.
 
-- All 18 GEA regions in all 4 seasons.
-- Varying EV-to-house ratios (1:4, 1:2, 1:1).
-- Varying SMC enrollment rates (from 0% to 100%).
-- Varying peak and valley windows.
-
-## Policy Implications {.light-centered .center}
-
-1. Utilities must plan a budget that scales with enrollment levels.
-2. Governments could get engaged (e.g. provide subsidies to offset the cost).
+::: {.notes}
+Four takeaways: SMC works at meaningful scale; regional grid structure shapes both magnitude and seasonality; utilities should target moderate enrollment rather than maximum participation; and because we don't monetize co-benefits like emissions reductions and avoided capacity investment, these estimates understate the total value of SMC.
+:::

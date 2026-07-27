@@ -10,11 +10,11 @@ library(kableExtra)
 <br>
 
 ::: {style="font-size: 30px;"}
-Under second round of reviews:
+Published in *Environmental Research Letters*:
 
 <br>
 
-Hu, Pingfan, Tarroja, B., Dean, M., Forrest, K., Hittinger, E., Jenn, A. & Helveston, J.P. (2024) "Measuring Electric Vehicle Owners' Willingness to Participate in BEV Smart Charging Programs" *Environmental Research Letters*.
+Hu, Pingfan, Tarroja, B., Dean, M., Forrest, K., Hittinger, E., Jenn, A. & Helveston, J.P. (2025) "Measuring electric vehicle owners' willingness to participate in smart charging programs" *Environmental Research Letters*. https://doi.org/10.1088/1748-9326/ae2597
 :::
 
 ## Prior studies have few EV owners in sample
@@ -132,7 +132,7 @@ smc_attributes_kable
 
 ```{r}
 smc_options <- tibble(
-  Attributes = c("Enrollment Cash", "Monthly Cash", "Monthly Override"),
+  Attributes = c("Enrollment Cash", "Monthly Cash", "Override Allowance"),
   Values = c(scales::dollar(300), scales::dollar(20), 5)
 )
 
@@ -347,7 +347,7 @@ Utility esimated using maximum likelihood estimation (MLE).
 :::
 
 ::: {.notes}
-The willingness to participate is quantified with the mixed logit model, shortened as MNL. The utility of each option is a linear combination of the attributes, which is the $v_j$ here, plus an error term, shown as $\epsilon_j$. The probability of choosing an option is the exponential of its utility divided by the sum of exponentials of all utilities.
+The willingness to participate is quantified with the mixed logit model, shortened as MXL. The utility of each option is a linear combination of the attributes, which is the $v_j$ here, plus an error term, shown as $\epsilon_j$. The probability of choosing an option is the exponential of its utility divided by the sum of exponentials of all utilities.
 
 Here are the coefficient estimate plots of both programs. As you can see, the "No Choice" has highgest coefficient, which simply means that without compensation, users will not participate in the programs.
 
