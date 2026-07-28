@@ -6,6 +6,13 @@
   src: url('https://raw.githubusercontent.com/pingfan-hu/resources/main/fonts/TsangerJinKai02-W04.ttf') format('truetype');
 }
 
+/* TsangerJinKai draws ×, − and arrows as full-width CJK glyphs; serve those codepoints from Palatino */
+@font-face {
+  font-family: 'SymbolFix';
+  src: local('Palatino'), local('Palatino Linotype'), local('Book Antiqua');
+  unicode-range: U+003D, U+00D7, U+2013-2014, U+2018-201F, U+2190-2193, U+2212;
+}
+
 .reveal,
 .reveal h1,
 .reveal h2,
@@ -13,7 +20,7 @@
 .reveal h4,
 .reveal h5,
 .reveal h6 {
-  font-family: 'TsangerJinKai', sans-serif;
+  font-family: 'SymbolFix', 'TsangerJinKai', sans-serif;
 }
 
 .reveal code,
@@ -25,6 +32,11 @@
 /* Table */
 th {
   font-size: 24px;
+}
+
+.reveal table th,
+.reveal table td {
+  vertical-align: middle;
 }
 
 .centered-container {

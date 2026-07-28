@@ -88,7 +88,7 @@ For the grid simulation, we zoom into two contrasting regions: CAISO in Californ
     <tr style="background-color: #F3F1E8;">
       <th style="width: 30%; padding: 14px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333;"></th>
       <th style="width: 28%; padding: 14px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 32px; color: #ED6D46;">CAISO</th>
-      <th style="width: 42%; padding: 14px 10px; border-bottom: 2px solid #333; font-size: 32px; color: #5654A2;">NYISO</th>
+      <th style="width: 42%; padding: 14px 10px; border-bottom: 2px solid #333; font-size: 32px; color: #739C69;">NYISO</th>
     </tr>
   </thead>
   <tbody>
@@ -120,7 +120,7 @@ For the grid simulation, we zoom into two contrasting regions: CAISO in Californ
 <br>
 
 ::: {style="text-align: center; font-size: 28px;"}
-Both **lead in BEV adoption** --- with **contrasting grid structures**.
+Both **lead in BEV adoption**, with **contrasting grid structures**.
 :::
 
 ::: {.notes}
@@ -295,24 +295,22 @@ Two messages in this plot. First, besides the baseline, there are five configura
 
 ## Step 3: Grid Net Load Profile {.light-centered}
 
-![](/figs/study-2/fig_2_12_step_3_grid_net_load.png){fig-align="center" width="75%" .purple-border}
+![](/figs/study-2/fig_2_12_step_3_grid_net_load.png){fig-align="center" width="85%" .purple-border}
 
 ::: {style="font-size: 28px;"}
-CAISO 2025 average: solar-driven **midday dip**, steep **evening ramp**.<br>
-Profiles plotted from 7 AM to keep the evening peak centered.
+Net Load = Grid Supply - Variable Sources
 :::
 
 ::: {.notes}
 Step three is the grid baseline. CAISO's 2025 average net load shows the classic duck curve: a midday dip from solar and a steep evening ramp. The evening peak and overnight valley together define the opportunity window for SMC. We plot days starting at 7 AM so the peak sits in the center and the valley forms one contiguous block on the right.
 :::
 
-## Step 4: Combined Load & Peak Shaving {.light-centered}
+## Step 4: Net Load + BEV & Peak Shaving {.light-centered}
 
-![](/figs/study-2/fig_2_13_step_4_grid_peak_shaving.png){fig-align="center" width="75%" .purple-border}
+![](/figs/study-2/fig_2_13_step_4_grid_peak_shaving.png){fig-align="center" width="85%" .purple-border}
 
 ::: {style="font-size: 28px;"}
-BEV load scaled to fleet size and stacked on net load.<br>
-Black: 0% enrollment. Green: 100% enrollment.
+BEV load scaled to fleet size and stacked on net load.
 :::
 
 ::: {.notes}
@@ -321,10 +319,10 @@ Step four stacks the scaled BEV load on the grid baseline. Each simulated vehicl
 
 ## Enrollment Curve from Study 1 {.light-centered}
 
-![](/figs/study-2/fig_2_9_smc_monthly_incentive.png){fig-align="center" width="65%" .purple-border}
+![](/figs/study-2/fig_2_9_smc_monthly_incentive.png){fig-align="center" width="85%" .purple-border}
 
 ::: {style="font-size: 28px;"}
-**30%** enroll voluntarily at \$0 → **60%** at \$20/month → **100%** requires \$85/month.
+Mixed logit prediction based on ~1300 real BEV owners.
 :::
 
 ::: {.notes}
@@ -333,11 +331,10 @@ This is the bridge between the two studies. The mixed logit model from Study 1, 
 
 ## Step 5: Cost Efficiency Analysis {.light-centered}
 
-![](/figs/study-2/fig_2_14_step_5_incentive_vs_peak_reduction.png){fig-align="center" width="70%" .purple-border}
+![](/figs/study-2/fig_2_14_step_5_incentive_vs_peak_reduction.png){fig-align="center" width="85%" .purple-border}
 
 ::: {style="font-size: 28px;"}
-Each dot is a 10% enrollment increment.<br>
-Program cost = incentive × number of enrolled households.
+Program cost [=]{style="font-family: 'Palatino Linotype', Palatino, serif;"} incentive [×]{style="font-family: 'Palatino Linotype', Palatino, serif;"} number of enrolled households.
 :::
 
 ::: {.notes}
@@ -346,61 +343,115 @@ Step five joins the peak-shaving results with the enrollment curve. Each dot alo
 
 ## Results {.dark-centered .center}
 
-## Annual Average Peak Shaving {.light-centered}
+## Annual Average Peak Shaving {.light-centered .center}
 
-::: {.columns}
-::: {.column}
-![](/figs/study-2/fig_2_1_caiso_avg.png){fig-align="center" width="100%" .purple-border}
+::: {style="border: 2px solid #333; border-radius: 8px; padding: 6px 18px;"}
 
-::: {style="text-align: center; font-size: 28px;"}
-**CAISO: −3.7 GW** (30.5 → 26.8 GW)<br>a **12.1%** reduction
-:::
-:::
+<table style="width: 100%; border-collapse: collapse; text-align: center; font-size: 30px; margin: 0;">
+  <thead>
+    <tr style="background-color: #F3F1E8;">
+      <th colspan="2" style="width: 50%; padding: 12px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 32px; color: #ED6D46; text-align: center;">CAISO</th>
+      <th colspan="2" style="width: 50%; padding: 12px 10px; border-bottom: 2px solid #333; font-size: 32px; color: #739C69; text-align: center;">NYISO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2" style="padding: 10px; border-right: 1px solid #333; text-align: center;"><img src="figs/study-2/fig_2_1_caiso_avg.png" style="width: 100%; margin: 0; vertical-align: middle;"/></td>
+      <td colspan="2" style="padding: 10px; text-align: center;"><img src="figs/study-2/fig_2_1_nyiso_avg.png" style="width: 100%; margin: 0; vertical-align: middle;"/></td>
+    </tr>
+    <tr>
+      <td style="width: 17%; padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Peak shave</strong></td>
+      <td style="width: 33%; padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center;">3.7 GW (30.5 → 26.8)</td>
+      <td style="width: 17%; padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Peak shave</strong></td>
+      <td style="width: 33%; padding: 14px 10px; border-top: 1px solid #333; text-align: center;">1.6 GW (21.2 → 19.6)</td>
+    </tr>
+    <tr>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Percentage</strong></td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center;">12.1%</td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Percentage</strong></td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; text-align: center;">7.5%</td>
+    </tr>
+  </tbody>
+</table>
 
-::: {.column}
-![](/figs/study-2/fig_2_1_nyiso_avg.png){fig-align="center" width="100%" .purple-border}
-
-::: {style="text-align: center; font-size: 28px;"}
-**NYISO: −1.6 GW** (21.2 → 19.6 GW)<br>a **7.5%** reduction
-:::
-:::
-:::
-
-::: {style="text-align: center; font-size: 28px;"}
-At 100% SMC enrollment, relative to unmanaged charging.
 :::
 
 ::: {.notes}
 On an annual average day with full enrollment, SMC shaves 3.7 gigawatts off CAISO's evening peak — about 12% — and 1.6 gigawatts in NYISO, about 7.5%. CAISO does better both because it has more households and because its deep overnight valley absorbs the deferred charging.
 :::
 
-## Extreme Peak-Shaving Days {.light-centered}
+## Extreme Days: [CAISO]{style="color: #ED6D46;"} {.light-centered .center}
 
-::: {.columns}
-::: {.column}
-![](/figs/study-2/fig_2_2_caiso_extreme_1.png){fig-align="center" width="100%" .purple-border}
+::: {style="border: 2px solid #333; border-radius: 8px; padding: 6px 18px;"}
 
-::: {style="text-align: center; font-size: 26px;"}
-CAISO best day (Jun 1):<br>**−5.4 GW (14.4%)**
-:::
-:::
+<table style="width: 100%; border-collapse: collapse; font-size: 30px; margin: 0;">
+  <thead>
+    <tr style="background-color: #F3F1E8;">
+      <th colspan="2" style="width: 50%; padding: 12px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 32px; color: #2980B9; text-align: center;">Best Day (Jun 1)</th>
+      <th colspan="2" style="width: 50%; padding: 12px 10px; border-bottom: 2px solid #333; font-size: 32px; color: #E74C3C; text-align: center;">Worst Day (Dec 13)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2" style="padding: 10px; border-right: 1px solid #333; text-align: center;"><img src="figs/study-2/fig_2_2_caiso_extreme_1.png" style="width: 100%; margin: 0; vertical-align: middle;"/></td>
+      <td colspan="2" style="padding: 10px; text-align: center;"><img src="figs/study-2/fig_2_2_caiso_extreme_2.png" style="width: 100%; margin: 0; vertical-align: middle;"/></td>
+    </tr>
+    <tr>
+      <td style="width: 17%; padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Peak shave</strong></td>
+      <td style="width: 33%; padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center;">5.4 GW (37.6 → 32.2)</td>
+      <td style="width: 17%; padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Peak shave</strong></td>
+      <td style="width: 33%; padding: 14px 10px; border-top: 1px solid #333; text-align: center;">1.9 GW (30.7 → 28.8)</td>
+    </tr>
+    <tr>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Percentage</strong></td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center;">14.4%</td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Percentage</strong></td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; text-align: center;">6.2%</td>
+    </tr>
+  </tbody>
+</table>
 
-::: {.column}
-![](/figs/study-2/fig_2_2_caiso_extreme_2.png){fig-align="center" width="100%" .purple-border}
-
-::: {style="text-align: center; font-size: 26px;"}
-CAISO worst day (Dec 13):<br>**−1.9 GW (6.2%)**
-:::
-:::
-:::
-
-::: {style="text-align: center; font-size: 26px;"}
-NYISO: best day (Jul 13) **−2.2 GW (7.9%)**; worst day (Nov 8) **−0.8 GW (4.5%)**.<br>
-Days ranked by *achievable shaving*, not by highest demand.
 :::
 
 ::: {.notes}
-Performance varies a lot day to day. CAISO's best day shaves 5.4 gigawatts, its worst under 2. NYISO ranges from 2.2 down to 0.8. Important nuance: extreme days are ranked by how much peak can be shaved, not by how high the peak is — on heat-wave days, air conditioning dominates and EV charging is a small share, so SMC has less leverage.
+Performance varies a lot day to day. CAISO's best day shaves 5.4 gigawatts, its worst under 2. Important nuance: extreme days are ranked by how much peak can be shaved, not by how high the peak is — on heat-wave days, air conditioning dominates and EV charging is a small share, so SMC has less leverage.
+:::
+
+## Extreme Days: [NYISO]{style="color: #739C69;"} {.light-centered .center}
+
+::: {style="border: 2px solid #333; border-radius: 8px; padding: 6px 18px;"}
+
+<table style="width: 100%; border-collapse: collapse; font-size: 30px; margin: 0;">
+  <thead>
+    <tr style="background-color: #F3F1E8;">
+      <th colspan="2" style="width: 50%; padding: 12px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 32px; color: #2980B9; text-align: center;">Best Day (Jul 13)</th>
+      <th colspan="2" style="width: 50%; padding: 12px 10px; border-bottom: 2px solid #333; font-size: 32px; color: #E74C3C; text-align: center;">Worst Day (Nov 8)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2" style="padding: 10px; border-right: 1px solid #333; text-align: center;"><img src="figs/study-2/fig_2_3_nyiso_extreme_1.png" style="width: 100%; margin: 0; vertical-align: middle;"/></td>
+      <td colspan="2" style="padding: 10px; text-align: center;"><img src="figs/study-2/fig_2_3_nyiso_extreme_2.png" style="width: 100%; margin: 0; vertical-align: middle;"/></td>
+    </tr>
+    <tr>
+      <td style="width: 17%; padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Peak shave</strong></td>
+      <td style="width: 33%; padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center;">2.2 GW (27.8 → 25.6)</td>
+      <td style="width: 17%; padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Peak shave</strong></td>
+      <td style="width: 33%; padding: 14px 10px; border-top: 1px solid #333; text-align: center;">0.8 GW (17.8 → 17.0)</td>
+    </tr>
+    <tr>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Percentage</strong></td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center;">7.9%</td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Percentage</strong></td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; text-align: center;">4.5%</td>
+    </tr>
+  </tbody>
+</table>
+
+:::
+
+::: {.notes}
+NYISO's day-to-day range is narrower: the best day shaves 2.2 gigawatts, the worst 0.8. Same ranking nuance applies — days are ranked by achievable shaving, not by demand level.
 :::
 
 ## Cost Efficiency: Diminishing Returns {.light-centered}
@@ -408,55 +459,107 @@ Performance varies a lot day to day. CAISO's best day shaves 5.4 gigawatts, its 
 ::: {.columns}
 ::: {.column}
 ![](/figs/study-2/fig_2_4_caiso_efficiency_extreme.png){fig-align="center" width="100%" .purple-border}
-
-::: {style="text-align: center; font-size: 26px;"}
-CAISO efficiency frontier
-:::
 :::
 
 ::: {.column}
 ![](/figs/study-2/fig_2_4_nyiso_efficiency_extreme.png){fig-align="center" width="100%" .purple-border}
-
-::: {style="text-align: center; font-size: 26px;"}
-NYISO efficiency frontier
-:::
 :::
 :::
 
-::: {style="text-align: center; font-size: 28px; color: #E74C3C;"}
-**Moderate enrollment (30--50%) captures most of the peak reduction<br>at a fraction of the cost of full enrollment.**
+::: {style="text-align: center; font-size: 28px;"}
+Cost efficiency is highest at moderate enrollment (**30–50%**).
 :::
 
 ::: {.notes}
 Here's the central result. Each dot is a 10% enrollment step, and the dots stretch out along the cost axis — the last increments of enrollment are extremely expensive. Moderate enrollment, 30 to 50 percent, captures most of the achievable peak reduction at a fraction of the cost. And on about 15% of CAISO days, pushing enrollment too high actually reconstitutes a new overnight peak.
 :::
 
-## Seasonal Patterns {.light-centered}
+## Seasonal Patterns: [CAISO]{style="color: #ED6D46;"} {.light-centered .center}
 
-::: {.columns}
-::: {.column}
-![](/figs/study-2/fig_2_5_caiso_seasonal_2.png){fig-align="center" width="100%" .purple-border}
+::: {style="border: 2px solid #333; border-radius: 8px; padding: 6px 18px;"}
 
-::: {style="text-align: center; font-size: 26px;"}
-CAISO summer: peak 34.3 GW, **−3.7 GW**
-:::
-:::
+<table style="width: 100%; border-collapse: collapse; font-size: 28px; margin: 0;">
+  <thead>
+    <tr style="background-color: #F3F1E8;">
+      <th style="width: 25%; padding: 12px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 30px; text-align: center;">Spring</th>
+      <th style="width: 25%; padding: 12px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 30px; text-align: center;">Summer</th>
+      <th style="width: 25%; padding: 12px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 30px; text-align: center;">Fall</th>
+      <th style="width: 25%; padding: 12px 10px; border-bottom: 2px solid #333; font-size: 30px; text-align: center;">Winter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 6px; border-right: 1px solid #333; text-align: center;"><img src="figs/study-2/fig_2_5_caiso_seasonal_1.png" style="width: 100%; margin: 0; vertical-align: middle;"/></td>
+      <td style="padding: 6px; border-right: 1px solid #333; text-align: center;"><img src="figs/study-2/fig_2_5_caiso_seasonal_2.png" style="width: 100%; margin: 0; vertical-align: middle;"/></td>
+      <td style="padding: 6px; border-right: 1px solid #333; text-align: center;"><img src="figs/study-2/fig_2_5_caiso_seasonal_3.png" style="width: 100%; margin: 0; vertical-align: middle;"/></td>
+      <td style="padding: 6px; text-align: center;"><img src="figs/study-2/fig_2_5_caiso_seasonal_4.png" style="width: 100%; margin: 0; vertical-align: middle;"/></td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 6px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center; font-size: 24px;">3.7 GW (27.5 → 23.8)</td>
+      <td style="padding: 12px 6px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center; font-size: 24px;">3.7 GW (34.3 → 30.6)</td>
+      <td style="padding: 12px 6px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center; font-size: 24px;">3.8 GW (32.3 → 28.5)</td>
+      <td style="padding: 12px 6px; border-top: 1px solid #333; text-align: center; font-size: 24px;">3.6 GW (29.1 → 25.5)</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 6px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center; font-size: 24px;">13.5%</td>
+      <td style="padding: 12px 6px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center; font-size: 24px;">10.8%</td>
+      <td style="padding: 12px 6px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center; font-size: 24px;">11.8%</td>
+      <td style="padding: 12px 6px; border-top: 1px solid #333; text-align: center; font-size: 24px;">12.4%</td>
+    </tr>
+    <tr>
+      <td colspan="4" style="padding: 12px 10px; border-top: 1px solid #333; text-align: center;">Peak shave for all seasons: <strong>3.6–3.8 GW (10.8–13.5%)</strong></td>
+    </tr>
+  </tbody>
+</table>
 
-::: {.column}
-![](/figs/study-2/fig_2_6_nyiso_seasonal_4.png){fig-align="center" width="100%" .purple-border}
-
-::: {style="text-align: center; font-size: 26px;"}
-NYISO winter: overnight heating load<br>compresses the valley, **−1.4 GW**
-:::
-:::
-:::
-
-::: {style="text-align: center; font-size: 28px;"}
-CAISO shaves **3.5--4.0 GW in every season**; NYISO shaves 1.5--2.0 GW,<br>with winter the weakest season.
 :::
 
 ::: {.notes}
-Seasonally, CAISO is remarkably consistent — 3.5 to 4 gigawatts in every season, because the solar-shaped profile keeps the peak-to-valley gap wide year-round. NYISO's winter is the exception: overnight space heating keeps the valley elevated, leaving less room for deferred charging.
+Seasonally, CAISO is remarkably consistent — 3.6 to 3.8 gigawatts in every season, because the solar-shaped profile keeps the peak-to-valley gap wide year-round. Summer has the highest absolute peak from air conditioning, but the shaving potential barely moves.
+:::
+
+## Seasonal Patterns: [NYISO]{style="color: #739C69;"} {.light-centered .center}
+
+::: {style="border: 2px solid #333; border-radius: 8px; padding: 6px 18px;"}
+
+<table style="width: 100%; border-collapse: collapse; font-size: 28px; margin: 0;">
+  <thead>
+    <tr style="background-color: #F3F1E8;">
+      <th style="width: 25%; padding: 12px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 30px; text-align: center;">Spring</th>
+      <th style="width: 25%; padding: 12px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 30px; text-align: center;">Summer</th>
+      <th style="width: 25%; padding: 12px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 30px; text-align: center;">Fall</th>
+      <th style="width: 25%; padding: 12px 10px; border-bottom: 2px solid #333; font-size: 30px; text-align: center;">Winter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 6px; border-right: 1px solid #333; text-align: center;"><img src="figs/study-2/fig_2_6_nyiso_seasonal_1.png" style="width: 100%; margin: 0; vertical-align: middle;"/></td>
+      <td style="padding: 6px; border-right: 1px solid #333; text-align: center;"><img src="figs/study-2/fig_2_6_nyiso_seasonal_2.png" style="width: 100%; margin: 0; vertical-align: middle;"/></td>
+      <td style="padding: 6px; border-right: 1px solid #333; text-align: center;"><img src="figs/study-2/fig_2_6_nyiso_seasonal_3.png" style="width: 100%; margin: 0; vertical-align: middle;"/></td>
+      <td style="padding: 6px; text-align: center;"><img src="figs/study-2/fig_2_6_nyiso_seasonal_4.png" style="width: 100%; margin: 0; vertical-align: middle;"/></td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 6px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center; font-size: 24px;">1.5 GW (18.4 → 16.9)</td>
+      <td style="padding: 12px 6px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center; font-size: 24px;">1.6 GW (24.6 → 23.0)</td>
+      <td style="padding: 12px 6px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center; font-size: 24px;">1.5 GW (19.8 → 18.3)</td>
+      <td style="padding: 12px 6px; border-top: 1px solid #333; text-align: center; font-size: 24px;">1.4 GW (22.1 → 20.7)</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 6px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center; font-size: 24px;">8.2%</td>
+      <td style="padding: 12px 6px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center; font-size: 24px;">6.5%</td>
+      <td style="padding: 12px 6px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center; font-size: 24px;">7.6%</td>
+      <td style="padding: 12px 6px; border-top: 1px solid #333; text-align: center; font-size: 24px;">6.3%</td>
+    </tr>
+    <tr>
+      <td colspan="4" style="padding: 12px 10px; border-top: 1px solid #333; text-align: center;">Peak shave for all seasons: <strong>1.4–1.6 GW (6.3–8.2%)</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+:::
+
+::: {.notes}
+NYISO's winter is the exception: overnight space heating keeps the valley elevated, leaving less room for deferred charging — the smallest seasonal shaving at 1.4 gigawatts. The other three seasons cluster at 1.5 to 1.6.
 :::
 
 ## Seasonal Cost Efficiency {.light-centered}
@@ -464,63 +567,95 @@ Seasonally, CAISO is remarkably consistent — 3.5 to 4 gigawatts in every seaso
 ::: {.columns}
 ::: {.column}
 ![](/figs/study-2/fig_2_7_caiso_efficiency_seasonal.png){fig-align="center" width="100%" .purple-border}
-
-::: {style="text-align: center; font-size: 26px;"}
-CAISO: all four seasons **overlap**
-:::
 :::
 
 ::: {.column}
 ![](/figs/study-2/fig_2_7_nyiso_efficiency_seasonal.png){fig-align="center" width="100%" .purple-border}
-
-::: {style="text-align: center; font-size: 26px;"}
-NYISO: **winter diverges**, less shaving per dollar
-:::
 :::
 :::
 
 ::: {style="text-align: center; font-size: 28px;"}
-CAISO programs can run year-round at consistent efficiency;<br>NYISO utilities should account for reduced winter effectiveness.
+Seasonal cost efficiency is consistent in **CAISO**.
 :::
 
 ::: {.notes}
 The efficiency frontiers by season tell the same story: CAISO's four curves nearly overlap, so a year-round program delivers consistent value. NYISO's winter curve sits below the others at every enrollment level — utilities there may need seasonal enrollment targets or incentive levels.
 :::
 
-## How Do Real Programs Compare? {.smaller}
+## How Do Real Programs Compare? {.light-centered .center}
+
+::: {style="border: 2px solid #333; border-radius: 8px; padding: 6px 18px;"}
+
+<table style="width: 100%; border-collapse: collapse; font-size: 26px; margin: 0;">
+  <thead>
+    <tr style="background-color: #F3F1E8;">
+      <th style="width: 36%; padding: 12px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 28px; text-align: center;">Program</th>
+      <th style="width: 34%; padding: 12px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 28px; text-align: center;">Incentive</th>
+      <th style="width: 30%; padding: 12px 10px; border-bottom: 2px solid #333; font-size: 28px; text-align: center;">Enrollment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 14px 10px; border-right: 1px solid #333; text-align: center;">PCE Managed Charging<br>[(CAISO)]{style="color: #ED6D46;"}</td>
+      <td style="padding: 14px 10px; border-right: 1px solid #333; text-align: center;">$0 → $40 per month</td>
+      <td style="padding: 14px 10px; text-align: center;">1.4% → 10.6%</td>
+    </tr>
+    <tr>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center;">MCE Sync<br>[(CAISO)]{style="color: #ED6D46;"}</td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center;">$50 bonus + $10 per month</td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; text-align: center;">10% of serviceable market</td>
+    </tr>
+    <tr>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center;">SmartCharge New York<br>[(NYISO)]{style="color: #739C69;"}</td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center;">Up to $400 per year</td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; text-align: center;">~7% of registered EVs<br>(731 vehicles)</td>
+    </tr>
+  </tbody>
+</table>
+
+:::
 
 <br>
 
-```{r}
-real_programs <- tibble(
-  Program = c(
-    "PCE EV Managed Charging (CAISO)",
-    "MCE Sync (CAISO)",
-    "Con Edison SmartCharge (NYISO)"
-  ),
-  `Observed Outcome` = c(
-    "~4% enrollment overall; 10.6% at $40/month",
-    "~10% enrollment; −90% charging in 4-9 PM window",
-    "100 W/vehicle peak reduction vs. ~500 W we predict at full enrollment"
-  )
-)
-
-real_programs %>%
-  kable(escape = FALSE, align = c("l", "l")) %>%
-  kable_styling(position = "center", font_size = 26) %>%
-  row_spec(0, bold = TRUE)
-```
-
-<br>
-
-::: {style="font-size: 28px;"}
-1. Deployed programs sit **far below** the 30--50% cost-effective range.
-2. Stated-preference enrollment may be **optimistic** → our costs are a lower bound.
-3. Field evidence: **85%** stay enrolled a full year; overrides only **2.3%** of consumption.
+::: {style="text-align: center; font-size: 28px;"}
+Smart charging programs motivated EV owners to **charge off-peak**.
 :::
 
 ::: {.notes}
-Benchmarking against deployed programs: real pilots enroll 4 to 10 percent — well below the cost-effective range our simulation identifies, and consistent with hypothetical bias in stated-preference data. So our cost estimates should be read as a lower bound. On the reassuring side, field trials show 85% of drivers stay on managed tariffs for a full year and overrides are rare, so attrition risk is bounded.
+Three deployed programs anchor the simulation in reality. Peninsula Clean Energy ran a randomized pilot in San Mateo County for about nine months: enrollment rose monotonically with the incentive — 1.4% with no payment, 3.1% at $5, 5% at $20, and 10.6% at $40 per month — but three quarters of joiners were already on PG&E's EV rate and charging off-peak, and joiners used 15 to 20 percent less energy than comparable non-joiners. MCE Sync has run since 2021 across four Bay Area counties, holds about 10% of its serviceable market, and cut participants' charging in the 4-to-9 PM window by nearly 90%, with 96% of charging now off-peak. Con Edison's SmartCharge New York evaluation found 100 watts per vehicle on the NYISO peak day — 14% of the program's 700-watt design assumption — again because enrollees already charged very little during the peak window. The 7% enrollment share is our calculation from the evaluation's own population table: 731 participants against roughly 9,900 EVs registered in Con Edison territory per NYSERDA data — the report itself doesn't state a percentage.
+:::
+
+## What the Comparison Tells Us {.light-centered .center}
+
+::: {style="border: 2px solid #333; border-radius: 8px; padding: 6px 18px;"}
+
+<table style="width: 100%; border-collapse: collapse; font-size: 28px; margin: 0;">
+  <tbody>
+    <tr>
+      <td style="width: 22%; padding: 16px 10px; border-right: 1px solid #333; background-color: #F3F1E8; text-align: center;"><strong>Similarities</strong></td>
+      <td style="width: 78%; padding: 16px 18px; font-size: 26px;">Enrollment rises with incentives, as our model predicts.<br>Enrolled drivers shift ~90% of charging and rarely leave.</td>
+    </tr>
+    <tr>
+      <td style="padding: 16px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8; text-align: center;"><strong>Differences</strong></td>
+      <td style="padding: 16px 18px; border-top: 1px solid #333; font-size: 26px;">Real enrollment (4–10%) sits below our 30–50% target.<br>Measured extra shaving is small: joiners were already off-peak.</td>
+    </tr>
+    <tr>
+      <td style="padding: 16px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8; text-align: center;"><strong>Why</strong></td>
+      <td style="padding: 16px 18px; border-top: 1px solid #333; font-size: 26px;">Stated preference is optimistic by nature (hypothetical bias).<br>Pilots are small-area, short-term, and self-selected.</td>
+    </tr>
+  </tbody>
+</table>
+
+:::
+
+<br>
+
+::: {style="text-align: center; font-size: 28px;"}
+Model and field agree in **direction**; level gaps have known causes.
+:::
+
+::: {.notes}
+The comparison converges once we separate direction from level. In direction, the field confirms our model: PCE's enrollment rose monotonically with the incentive, exactly the upward-sloping enrollment curve from Study 1, and once drivers enroll they behave as our simulation assumes — MCE moved about 90% of charging out of the peak window, and PCE retention was near 100% in every arm. In level, both sides carry known biases. Our stated-preference curve is optimistic by nature — hypothetical bias — so our cost estimates are a lower bound. But the pilots are biased in the other direction: they ran in single counties for months, not years, and they attracted self-selected early adopters who already charged off-peak — PCE found 75% of joiners were already on the EV rate — so measured field impact understates what a representative population at scale could deliver. The truth lies between, which is why the simulation and the pilots are complements, not contradictions.
 :::
 
 ## Key Takeaways {.light-centered .center}
