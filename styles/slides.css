@@ -81,6 +81,16 @@ th {
   --r-block-margin: 5px;
 }
 
+/* Title-slide logo is a CSS background ON the #title-slide section (image set via
+   `style: "... background-image: url(figs/logo.png)"` in title-slide-attributes),
+   NOT Reveal's data-background layer. That keeps it INSIDE the scaled .slides stage,
+   so it sizes, positions, and scales relative to the slide content. */
+#title-slide {
+  background-repeat: no-repeat;
+  background-size: 24%;
+  background-position: right 12% center;
+}
+
 .custom-title-slide h1 {
   position: relative;
   top: 5vh;

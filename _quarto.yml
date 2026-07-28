@@ -3,7 +3,7 @@ project:
   output-dir: _site
 
 pagetitle: "PhD Thesis Defense"
-title: "PhD Thesis Defense:<br><span style='font-size: 0.7em;'>Electric Vehicle Smart Charging Adoption,<br>Grid Peak-Shaving Quantification, and<br>The `surveydown` Survey Platform</span>"
+title: "Sustainable Transportation,<br>Sustainable Research:<br><span style='font-size: 0.7em; color: #2C8475; display: inline-block; line-height: 1.5;'>Consumer Adoption and Grid Peak-Shaving<br>of Battery Electric Vehicle Smart Charging,<br>Inspiring the `surveydown` Survey Platform</span>"
 author: "<br>**Pingfan Hu**<br>George Washington University"
 
 format:
@@ -24,12 +24,8 @@ format:
     center-title-slide: true
     code-block-height: 650px
     title-slide-attributes:
-      data-background-image: figs/logo.png
-      data-background-size: 18%
-      data-background-opacity: "1"
-      data-background-position: right 20% center
       class: custom-title-slide
-      style: text-align:left;
+      style: "text-align:left; background-image: url(figs/logo.png);"
 
 execute: 
   warning: false
