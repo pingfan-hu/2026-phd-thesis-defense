@@ -39,8 +39,6 @@ There's been a few studies that looked on people's willingness to participate to
 
 2. **Enrollment Rate**: Under what **combinations of features** will BEV owners be more willing to opt in to smart charging programs?
 
-<br>
-
 ::: {.approach}
 [Approach]{.approach-title}
 
