@@ -41,12 +41,13 @@ There's been a few studies that looked on people's willingness to participate to
 
 <br>
 
-::: {.centered-container}
-**Conjoint survey** to collect BEV owners' willingness.
-:::
+::: {.approach}
+[Approach]{.approach-title}
 
-::: {.centered-container}
-**Mixed logit model** for utility simulations.
+---
+
+1. **Conjoint survey** to collect BEV owners' willingness.
+2. **Mixed logit model** for utility simulations.
 :::
 
 ::: {.notes}

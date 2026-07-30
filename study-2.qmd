@@ -55,12 +55,19 @@ The technical potential of managed charging is well documented, but most studies
 
 <br>
 
-::: {.centered-container}
-**Scenario-based simulation** for CAISO and NYISO.
+::: {.approach}
+[Approach]{.approach-title}
+
+---
+
+1. **Scenario-based simulation** for CAISO and NYISO.
+2. **Enrollment model**: incentives vs participation.
 :::
 
-::: {.centered-container}
-**Enrollment model**: incentives vs participation.
+::: {.notes}
+Two research questions. First, the physical side: how much peak demand can SMC actually shave, and does the answer depend on the grid region? Second, the economic side: what does that peak shaving cost, and is pushing enrollment higher always worth it?
+
+To answer them, we run a scenario-based simulation of CAISO and NYISO, and we join it with the enrollment model from Study 1, which links incentive levels to participation rates.
 :::
 
 ## 18 GEA regions in the USA {.light-centered}
@@ -86,9 +93,9 @@ For the grid simulation, we zoom into two contrasting regions: CAISO in Californ
 <table style="width: 100%; border-collapse: collapse; text-align: center; font-size: 30px; margin: 0;">
   <thead>
     <tr style="background-color: #F3F1E8;">
-      <th style="width: 30%; padding: 14px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333;"></th>
-      <th style="width: 28%; padding: 14px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 32px; color: #ED6D46;">CAISO</th>
-      <th style="width: 42%; padding: 14px 10px; border-bottom: 2px solid #333; font-size: 32px; color: #739C69;">NYISO</th>
+      <th style="width: 34%; padding: 14px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333;"></th>
+      <th style="width: 26%; padding: 14px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 32px; color: #ED6D46;">CAISO</th>
+      <th style="width: 40%; padding: 14px 10px; border-bottom: 2px solid #333; font-size: 32px; color: #739C69;">NYISO</th>
     </tr>
   </thead>
   <tbody>
@@ -98,13 +105,13 @@ For the grid simulation, we zoom into two contrasting regions: CAISO in Californ
       <td style="padding: 14px 10px;">3.16 million</td>
     </tr>
     <tr>
-      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Energy Source</strong></td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8; font-size: 27px; white-space: nowrap;"><strong>Different Energy Sources</strong></td>
       <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Solar</td>
       <td style="padding: 14px 10px; border-top: 1px solid #333;">Hydro</td>
     </tr>
     <tr>
       <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8;"><strong>Net load shape</strong></td>
-      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">Duck curve</td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333;">"Duck curve"</td>
       <td style="padding: 14px 10px; border-top: 1px solid #333;">Flat profile</td>
     </tr>
     <tr>
@@ -171,7 +178,7 @@ We picked California and New York because they're both BEV leaders but structura
 Four data sources: NHTS trips define when vehicles travel and how much energy they need; GridStatus.io gives us actual 2025 net load for both regions; the Census scales our 10,000 simulated vehicles up to regional fleet sizes; and crucially, the discrete choice experiment from Study 1 translates incentive dollars into enrollment rates. Net load means total consumption minus variable renewables, so it's the demand that dispatchable generation must serve.
 :::
 
-## Simulation Setup {.light-centered .center}
+## Simulation Assumptions {.light-centered .center}
 
 ::: {.columns}
 ::: {.column style="padding-top: 0.5em; width: 48%;"}
@@ -256,7 +263,7 @@ Four data sources: NHTS trips define when vehicles travel and how much energy th
 Key assumptions: 200-mile BEVs on Level 2 home charging, batteries kept between 20 and 80 percent, and travel is never compromised: sessions that can't be shifted stay in place as override events, which stay within 2 to 3 per vehicle per month. We simulate the full range of enrollment levels and five time-of-use window configurations; the 11 PM valley start wins in both regions, so all reported results use it.
 :::
 
-## Workflow {.light-centered}
+## Simulation Overview {.light-centered}
 
 ![](/figs/study-2/fig_2_8_workflow.png){fig-align="center" width="80%" .purple-border}
 
@@ -274,11 +281,11 @@ The framework has two stages. Stage one is the peak-shaving model: three data so
 ![](/figs/study-2/fig_2_10_step_1_ev_load.png){fig-align="center" width="85%" .purple-border}
 
 ::: {style="font-size: 30px;"}
-Unmanaged charging of 10,000 simulated vehicles **peaks at 7 PM**.
+Simulation results based on ~26,000 survey responses from 2022 NHTS.
 :::
 
 ::: {.notes}
-Step one builds the unmanaged BEV charging load from NHTS travel patterns. People come home in the evening and plug in, so the load peaks at 7 PM, exactly on top of the existing grid evening peak.
+Step one builds the unmanaged BEV charging load from about 26,000 travel records in the 2022 NHTS. People come home in the evening and plug in, so the load peaks at 7 PM, exactly on top of the existing grid evening peak.
 :::
 
 ## Step 2: BEV Load Peak Shaving {.light-centered}
@@ -315,30 +322,6 @@ BEV load scaled to fleet size and stacked on net load.
 
 ::: {.notes}
 Step four stacks the scaled BEV load on the grid baseline. Each simulated vehicle represents 769 vehicles in CAISO and 316 in NYISO. The black line is total load with no SMC; the green line is full enrollment: the evening peak drops and the load moves into the overnight valley.
-:::
-
-## Enrollment Curve from Study 1 {.light-centered}
-
-![](/figs/study-2/fig_2_9_smc_monthly_incentive.png){fig-align="center" width="85%" .purple-border}
-
-::: {style="font-size: 28px;"}
-Mixed logit prediction based on ~1300 real BEV owners.
-:::
-
-::: {.notes}
-This is the bridge between the two studies. The mixed logit model from Study 1, holding non-monetary attributes fixed, gives the enrollment rate as a function of the monthly incentive. About 30% would participate with no payment at all, \$20 a month gets you to about 60%, but full enrollment would take \$85 per household per month. The curve is concave, meaning every additional dollar buys less enrollment, and since utilities pay a uniform incentive to everyone, total program cost grows non-linearly.
-:::
-
-## Step 5: Cost Efficiency Analysis {.light-centered}
-
-![](/figs/study-2/fig_2_14_step_5_incentive_vs_peak_reduction.png){fig-align="center" width="85%" .purple-border}
-
-::: {style="font-size: 28px;"}
-Program cost [=]{style="font-family: 'Palatino Linotype', Palatino, serif;"} incentive [×]{style="font-family: 'Palatino Linotype', Palatino, serif;"} number of enrolled households.
-:::
-
-::: {.notes}
-Step five joins the peak-shaving results with the enrollment curve. Each dot along a curve is a 10% enrollment step. The dots spread out along the cost axis at higher enrollment: attracting marginal participants requires raising the payment for all existing enrollees, so marginal costs rise sharply.
 :::
 
 ## Peak Shaving: Annual Average {.light-centered .center}
@@ -452,6 +435,26 @@ Performance varies a lot day to day. CAISO's best day shaves 5.4 gigawatts, its 
 NYISO's day-to-day range is narrower: the best day shaves 2.2 gigawatts, the worst 0.8. The same ranking nuance applies: days are ranked by achievable shaving, not by demand level.
 :::
 
+## Enrollment Curve from Study 1 {.light-centered}
+
+![](/figs/study-2/fig_2_9_smc_monthly_incentive.png){fig-align="center" width="85%" .purple-border}
+
+::: {style="font-size: 28px;"}
+Mixed logit prediction based on ~1300 real BEV owners.
+:::
+
+::: {.notes}
+This is the bridge between the two studies. The mixed logit model from Study 1, holding non-monetary attributes fixed, gives the enrollment rate as a function of the monthly incentive. About 30% would participate with no payment at all, \$20 a month gets you to about 60%, but full enrollment would take \$85 per household per month. The curve is concave, meaning every additional dollar buys less enrollment, and since utilities pay a uniform incentive to everyone, total program cost grows non-linearly.
+:::
+
+## Peak from EV charging decreases with higher enrollment {.light-centered style="font-size: 0.85em;"}
+
+![](/figs/study-2/fig_2_14_step_5_incentive_vs_peak_reduction.png){fig-align="center" width="100%" .purple-border}
+
+::: {.notes}
+The final step joins the peak-shaving results with the enrollment curve: as enrollment rises, the peak from EV charging falls in both regions. Each dot along a curve is a 10% enrollment step, and program cost is the incentive times the number of enrolled households. The dots spread out along the cost axis at higher enrollment: attracting marginal participants requires raising the payment for all existing enrollees, so marginal costs rise sharply.
+:::
+
 ## Cost Efficiency Frontier {.light-centered}
 
 ::: {.columns}
@@ -560,7 +563,7 @@ Seasonally, CAISO is remarkably consistent: 3.6 to 3.8 gigawatts in every season
 NYISO's winter is the exception: overnight space heating keeps the valley elevated, leaving less room for deferred charging and giving the smallest seasonal shaving at 1.4 gigawatts. The other three seasons cluster at 1.5 to 1.6.
 :::
 
-## Seasonal Cost Efficiency {.light-centered}
+## Seasonal cost efficiency is<br>consistent in CAISO, but varies in NYISO. {.light-centered style="font-size: 0.85em;"}
 
 ::: {.columns}
 ::: {.column}
@@ -572,15 +575,11 @@ NYISO's winter is the exception: overnight space heating keeps the valley elevat
 :::
 :::
 
-::: {style="text-align: center; font-size: 28px;"}
-Seasonal cost efficiency is consistent in **CAISO**, but varies in **NYISO**.
-:::
-
 ::: {.notes}
 The efficiency frontiers by season tell the same story: CAISO's four curves nearly overlap, so a year-round program delivers consistent value. NYISO's winter curve sits below the others at every enrollment level, so utilities there may need seasonal enrollment targets or incentive levels.
 :::
 
-## How Do Real Programs Compare? {.light-centered .center}
+## How Do Pilot Programs Compare? {.light-centered .center}
 
 ::: {style="border: 2px solid #333; border-radius: 8px; padding: 6px 18px;"}
 
@@ -618,17 +617,17 @@ The efficiency frontiers by season tell the same story: CAISO's four curves near
 ::: {style="text-align: center; font-size: 28px;"}
 - Smart charging programs motivated EV owners to **charge off-peak**.
 - More incentive results in more enrollment.
-- Stated preference is more optimistic than reality.
+- Stated preference surveys are not calibrated with current pilot programs.
 :::
 
 ::: {.notes}
-These are three deployed smart charging programs: two in CAISO territory, one in NYISO. From them I draw three takeaways.
+These are three deployed pilot programs: two in CAISO territory, one in NYISO. From them I draw three takeaways.
 
 First, smart charging programs motivated EV owners to charge off-peak: MCE Sync cut charging in the 4-to-9 PM window by nearly 90%, with 96% of charging now off-peak. This matches our program setup, which shifts enrolled charging away from the evening peak.
 
 Second, more incentive results in more enrollment. PCE's randomized pilot shows this directly: 1.4% with no payment, rising monotonically to 10.6% at $40 per month. Our simulation reveals the same relationship from the stated preference side.
 
-Third, stated preference is more optimistic than reality: real enrollment sits around 4 to 10 percent, below our 30 to 50 percent target. That's expected: stated preference always overstates real behavior, and these pilots are limited to small areas over short periods, so they carry their own biases. But this is exactly why stated preference is still valuable: it gives a theoretical benchmark, the optimistic upper bound of what these programs can achieve. And even though the numbers are optimistic, the trend is correct: the field data confirms the direction our model predicts.
+Third, stated preference surveys are not calibrated with these pilot programs: real enrollment sits around 4 to 10 percent, below our 30 to 50 percent target. That's expected: stated preference always overstates real behavior, and these pilots are limited to small areas over short periods, so they carry their own biases. But this is exactly why stated preference is still valuable: it gives a theoretical benchmark, the optimistic upper bound of what these programs can achieve. And even though the numbers are optimistic, the trend is correct: the field data confirms the direction our model predicts.
 
 If asked: the 7% SmartCharge New York enrollment is our calculation: 731 participants against roughly 9,900 EVs registered in Con Edison territory per NYSERDA data; the report itself doesn't state a percentage.
 :::
@@ -640,13 +639,13 @@ If asked: the 7% SmartCharge New York enrollment is our calculation: 731 partici
 <table style="width: 100%; border-collapse: collapse; font-size: 28px; margin: 0;">
   <tbody>
     <tr>
-      <td colspan="2" style="padding: 16px 14px; text-align: left;"><span style="display: flex;"><span style="white-space: pre;">1\. </span><span>Our simulation is endorsed by <strong style="color: #ED6D46;">real programs</strong>:<br>more incentive brings more enrollment, and charging shifts to valley windows.</span></span></td>
+      <td colspan="2" style="padding: 16px 14px; text-align: left;"><span style="display: flex;"><span style="white-space: pre;">1\. </span><span>The <strong style="color: #2980B9;">cost-effectiveness</strong> of peak shaving requires:<br>moderate enrollment (30-50%), and seasonal effect consideration.</span></span></td>
     </tr>
     <tr>
-      <td colspan="2" style="padding: 16px 14px; border-top: 1px solid #333; text-align: left;"><span style="display: flex;"><span style="white-space: pre;">2\. </span><span>SMC has <strong style="color: #739C69;">co-benefits</strong> beyond monetary value:<br>less emission, longer battery life, and less storage capacity requirement.</span></span></td>
+      <td colspan="2" style="padding: 16px 14px; border-top: 1px solid #333; text-align: left;"><span style="display: flex;"><span style="white-space: pre;">2\. </span><span><strong style="color: #ED6D46;">Peak-shaving</strong> potential is:<br>14.4% for CAISO, and 7.9% for NYISO.</span></span></td>
     </tr>
     <tr>
-      <td colspan="2" style="padding: 16px 14px; border-top: 1px solid #333; text-align: left;"><span style="display: flex;"><span style="white-space: pre;">3\. </span><span>The <strong style="color: #2980B9;">cost-effectiveness</strong> of peak shaving requires:<br>moderate enrollment (30-50%), and seasonal effect consideration.</span></span></td>
+      <td colspan="2" style="padding: 16px 14px; border-top: 1px solid #333; text-align: left;"><span style="display: flex;"><span style="white-space: pre;">3\. </span><span>SMC has <strong style="color: #739C69;">co-benefits</strong> beyond monetary value:<br>less emission, longer battery life, and less storage capacity requirement.</span></span></td>
     </tr>
     <tr>
       <td style="width: 20%; padding: 16px 14px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8; text-align: center;"><strong style="color: #F07167;">Limitations</strong></td>
@@ -660,11 +659,11 @@ If asked: the 7% SmartCharge New York enrollment is our calculation: 731 partici
 ::: {.notes}
 I close with three takeaways and the limitations.
 
-First, the deployed programs we just compared confirm our model's direction: incentives drive enrollment, and enrolled drivers shift charging off-peak, though real enrollment sits below our stated-preference levels.
+First, the conclusion: SMC delivers meaningful evening peak reductions in both regions, but returns to enrollment diminish sharply: 30 to 50% participation captures most of the achievable reduction at a fraction of the cost, and pushing too high can even create a new overnight peak. So utilities should design SMC programs around moderate enrollment targets, not maximum participation.
 
-Second, co-benefits. Shifting charging into the overnight valley reduces marginal emissions, the 20-to-80% SOC window extends battery life, and an enrolled fleet acts as dispatchable capacity that defers new transmission and generation investment. None of these are monetized in our efficiency frontiers, so the frontiers are a lower bound on the total value of SMC.
+Second, the magnitude: at best, SMC shaves 14.4% off CAISO's evening peak and 7.9% off NYISO's. CAISO does better because its deep overnight valley absorbs the deferred charging.
 
-Third, the conclusion: SMC delivers meaningful evening peak reductions in both regions, but returns to enrollment diminish sharply: 30 to 50% participation captures most of the achievable reduction at a fraction of the cost, and pushing too high can even create a new overnight peak. So utilities should design SMC programs around moderate enrollment targets, not maximum participation.
+Third, co-benefits. Shifting charging into the overnight valley reduces marginal emissions, the 20-to-80% SOC window extends battery life, and an enrolled fleet acts as dispatchable capacity that defers new transmission and generation investment. None of these are monetized in our efficiency frontiers, so the frontiers are a lower bound on the total value of SMC.
 
 Finally, the limitations. The enrollment curve comes from stated preference, so it may overstate real uptake and our cost estimates may be a lower bound. We model residential Level 2 charging in single-family homes only, which is relevant for NYISO, where New York City is largely multi-family. And results are calibrated to 2025 net load, so they shouldn't be extrapolated to future high-solar, high-storage grids.
 :::

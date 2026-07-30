@@ -65,6 +65,43 @@ th {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Approach panel on Research Questions slides */
+.approach {
+  max-width: 80%;
+  margin: 1em auto 0;
+  background-color: #DFE8EC;
+  border: 1px solid rgba(44, 62, 80, 0.35);
+  border-radius: 12px;
+  padding: 12px 30px 16px;
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.approach-title {
+  font-weight: bold;
+  font-size: 32px;
+  color: #ED6D46;
+}
+
+.approach hr {
+  border: none;
+  border-top: 2px solid #ED6D46;
+  opacity: 0.45;
+  margin: 6px auto 10px;
+}
+
+.approach ol {
+  text-align: left;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.approach ol li {
+  margin: 6px 0;
+}
+
 .grid-container {
   display: grid;
   gap: 10px;
