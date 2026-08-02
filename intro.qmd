@@ -1,4 +1,4 @@
-## EV sales in US reaching ~10% of sales {style="text-align: center;"}
+## EV sales in US reaching ~10% of sales {style="text-align: center;" .light-centered .center}
 
 ![](/figs/study-1/ev_sales_us.png){fig-align="center" width="80%"}
 
@@ -6,7 +6,7 @@
 Source: Argonne National Lab, [www.anl.gov/ev-facts/model-sales](https://www.anl.gov/ev-facts/model-sales)
 :::
 
-## Introduction {.smaller}
+## Introduction {.smaller .light-centered .center}
 
 - **Unmanaged** BEV charging is becoming a problem to the grid.
 - **Managed** charging is cheaper and smoothes out the grid load.
@@ -20,7 +20,7 @@ Unmanaged BEV charging is becoming a problem to the grid due to the spike. That'
 Smart charging is a type of managed charging, which includes Supplier-Managed Charging, shortened as SMC, and Vehicle-to-Grid, shortened as V2G.
 :::
 
-## SMC - Supplier Managed Charging
+## SMC - Supplier Managed Charging {.light-centered .center}
 
 ::: {style="font-size: 32px;"}
 - SMC smooths out EV charging spike (called "Peak-shaving").
@@ -36,7 +36,7 @@ For SMC, Supplier-Managed Charging, it smooths out the overnight EV charging dem
 As you can see, with unmanaged charging, the BEV load easily passes over the capacity threshold.
 :::
 
-## SMC - Supplier Managed Charging
+## SMC - Supplier Managed Charging {.light-centered .center}
 
 ::: {style="font-size: 32px;"}
 - SMC smooths out EV charging spike (called "Peak-shaving").
@@ -50,7 +50,7 @@ As you can see, with unmanaged charging, the BEV load easily passes over the cap
 But with SMC, the electricity demand is controlled below the threshold. It reduces the peak demand and saves money.
 :::
 
-## V2G - Vehicle-to-Grid
+## V2G - Vehicle-to-Grid {.light-centered .center}
 
 ![](/figs/study-1/education_2.png){fig-align="center" width="70%"}
 

@@ -6,7 +6,7 @@
 
 {{< include /study-3.qmd >}}
 
-## Research Contributions
+## Research Contributions {.light-centered .center}
 
 <br>
 
@@ -24,4 +24,4 @@ I hope these studies could benefit sustainable transportation, and give persiste
 
 {{< include /appendix.qmd >}}
 
-## Reference List
+## Reference List {.center}

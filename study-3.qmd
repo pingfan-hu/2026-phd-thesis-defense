@@ -111,7 +111,7 @@ Expensive!
 
 ![](/figs/study-3/quarto-process.png){fig-align="center" width=100% .purple-border}
 
-## {style="font-size: 0.7em;"}
+## {style="font-size: 0.7em;" .light-centered .center}
 
 ::: {.column width="48%"}
 
@@ -144,7 +144,7 @@ quarto_r_html()
 
 :::
 
-## {style="font-size: 0.7em;"}
+## {style="font-size: 0.7em;" .light-centered .center}
 
 ::: {.column width="48%"}
 
@@ -182,7 +182,7 @@ quarto_python_pdf()
 ![](/figs/study-3/what-is-surveydown.png){width=100%}
 
 
-## {style="font-size: 0.7em;"}
+## {style="font-size: 0.7em;" .light-centered .center}
 
 ::: {.column width="48%"}
 
@@ -208,7 +208,7 @@ surveycode()
 
 :::
 
-## {style="font-size: 0.7em;"}
+## {style="font-size: 0.7em;" .light-centered .center}
 
 ::: {.column width="48%"}
 
@@ -232,7 +232,7 @@ YAML header for a "clean" output
 
 :::
 
-## {style="font-size: 0.7em;"}
+## {style="font-size: 0.7em;" .light-centered .center}
 
 ::: {.column width="48%"}
 
@@ -256,7 +256,7 @@ Load the `surveydown` Package
 
 :::
 
-## {style="font-size: 0.7em;"}
+## {style="font-size: 0.7em;" .light-centered .center}
 
 ::: {.column width="48%"}
 
@@ -282,7 +282,7 @@ to define survey pages
 
 :::
 
-## {style="font-size: 0.7em;"}
+## {style="font-size: 0.7em;" .light-centered .center}
 
 ::: {.column width="48%"}
 
@@ -310,7 +310,7 @@ Page content
 
 :::
 
-## {style="font-size: 0.7em;"}
+## {style="font-size: 0.7em;" .light-centered .center}
 
 ::: {.column width="48%"}
 
@@ -336,7 +336,7 @@ surveycode()
 
 :::
 
-## {style="font-size: 0.7em;"}
+## {style="font-size: 0.7em;" .light-centered .center}
 
 ::: {.column width="48%"}
 
@@ -413,13 +413,13 @@ An **R script** defining the survey Shiny app.
 
 ## `surveydown` is highly flexible and customizable to user needs {.dark-centered .center style="font-size: 1.2em;"}
 
-## Randomization: Conjoint question {.light-centered}
+## Randomization: Conjoint question {.light-centered .center}
 
 <br>
 
 ![](/figs/study-1/conjoint_example.jpg){fig-align="center" width="80%"}
 
-## Shiny compatibility: `leaflet` map {.light-centered}
+## Shiny compatibility: `leaflet` map {.light-centered .center}
 
 ![](/figs/study-3/leaflet.gif){fig-align="center" width=65%}
 
@@ -429,7 +429,7 @@ An **R script** defining the survey Shiny app.
 
 ![](/figs/study-3/comparisons.png){fig-align="center" width=100% .purple-border}
 
-## Star Count on GitHub {.light-centered}
+## Star Count on GitHub {.light-centered .center}
 
 ![](/figs/study-3/surveydown-star-history.png){fig-align="center" width=80% .purple-border}
 

@@ -7,7 +7,7 @@ source("scripts.R")
 
 ## Appendix {.dark-centered .center}
 
-## SMC Scenario Analysis
+## SMC Scenario Analysis {.light-centered .center}
 ![](/figs/study-1/smc_scenario_plot.png){fig-align="center"}
 
 ::: {style="font-size: 26px;"}
@@ -24,7 +24,7 @@ Here for SMC we have 3 scenarios. They are flexibility, recurring cash, and one-
 As we can see, for SMC, flexibility is highly valued, and recurring incentives are more important than one-time. So due to the range anxiety, payment alone is not enough. There should be a combination of flexibility and monetary incentives.
 :::
 
-## V2G Scenario Analysis
+## V2G Scenario Analysis {.light-centered .center}
 ![](/figs/study-1/v2g_scenario_plot.png){fig-align="center"}
 
 ::: {style="font-size: 26px;"}
@@ -37,7 +37,7 @@ As we can see, for SMC, flexibility is highly valued, and recurring incentives a
 For V2G programs, recurring incentives are also more important than one-time. But flexibility is compromised since owners are willing to use their BEVs as a source of income. So the V2G programs are more incentive powered than SMC programs.
 :::
 
-## Smart Charging Enrollment Simulator {style="text-align: center;"}
+## Smart Charging Enrollment Simulator {style="text-align: center;" .light-centered .center}
 
 [![](/figs/study-1/simulator.png){width="100%" fig-align="center" style="border: 2px solid #5654A2;"}](https://gwuvehicle.shinyapps.io/enrollment_simulator/)
 
@@ -48,7 +48,7 @@ Here we've made a smart charging enrollment simulator. We can play around with i
 2. More enrollment increase in V2G: Recurring cash from $2 to $20.
 :::
 
-## SMC Logit Model {.smaller}
+## SMC Logit Model {.smaller .light-centered .center}
 
 $$
 \begin{align*}
@@ -82,7 +82,7 @@ smc_table
 
 :::
 
-## V2G Logit Model {.smaller}
+## V2G Logit Model {.smaller .light-centered .center}
 
 $$
 \begin{align*}
@@ -230,13 +230,13 @@ Conditional stopping
 :::
 :::
 
-## Conditional showing - `sd_show_if()` {.light-centered}
+## Conditional showing - `sd_show_if()` {.light-centered .center}
 
 <br>
 
 ![](/figs/study-3/conditional-showing.gif){width=50% .purple-border}
 
-## Conditional showing - `sd_show_if()` {.light-centered}
+## Conditional showing - `sd_show_if()` {.light-centered .center}
 
 <br>
 
@@ -276,14 +276,14 @@ Condition ~ Target
 
 ![](/figs/study-3/llm.gif){fig-align="center" width=80% .purple-border}
 
-## The companion [`sdstudio`](https://github.com/surveydown-dev/sdstudio/) package {.light-centered}
+## The companion [`sdstudio`](https://github.com/surveydown-dev/sdstudio/) package {.light-centered .center}
 
 ![](/figs/study-3/sdstudio-build.gif){fig-align="center" width=90% .purple-border}
 
-## The companion [`sdstudio`](https://github.com/surveydown-dev/sdstudio/) package {.light-centered}
+## The companion [`sdstudio`](https://github.com/surveydown-dev/sdstudio/) package {.light-centered .center}
 
 ![](/figs/study-3/sdstudio-preview.gif){fig-align="center" width=90% .purple-border}
 
-## The companion [`sdstudio`](https://github.com/surveydown-dev/sdstudio/) package {.light-centered}
+## The companion [`sdstudio`](https://github.com/surveydown-dev/sdstudio/) package {.light-centered .center}
 
 ![](/figs/study-3/sdstudio-data.gif){fig-align="center" width=90% .purple-border}

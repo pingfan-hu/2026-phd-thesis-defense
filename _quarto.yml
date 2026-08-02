@@ -7,9 +7,8 @@ title: "Sustainable Transportation,<br>Sustainable Research:<br><span style='fon
 author: "<br>**Pingfan Hu**<br>George Washington University"
 
 format:
-  revealjs: 
+  touhou-revealjs:
     smaller: false
-    theme: styles/theme.scss
     css: styles/slides.css
     bibliography: bibliography.bib
     csl: styles/apa.csl
