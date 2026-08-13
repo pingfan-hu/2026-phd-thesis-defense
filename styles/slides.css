@@ -124,12 +124,12 @@ th {
    so it sizes, positions, and scales relative to the slide content. */
 #title-slide {
   background-repeat: no-repeat;
-  background-size: 20%;
-  background-position: right 12% center;
+  background-size: 25%;
+  background-position: right 7% center;
 }
 
 /* The theme caps title text at 58%, tuned for its default 28% logo. This
-   deck's logo is 20% at `right 12%`, so the circle starts ~68% across the
+   deck's logo is 25% at `right 7%`, so the circle starts ~68% across the
    stage; widen the cap accordingly so the long subtitle lines don't wrap. */
 #title-slide > h1.title,
 #title-slide > .quarto-title-authors {
