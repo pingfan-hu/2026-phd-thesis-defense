@@ -124,8 +124,16 @@ th {
    so it sizes, positions, and scales relative to the slide content. */
 #title-slide {
   background-repeat: no-repeat;
-  background-size: 24%;
+  background-size: 20%;
   background-position: right 12% center;
+}
+
+/* The theme caps title text at 58%, tuned for its default 28% logo. This
+   deck's logo is 20% at `right 12%`, so the circle starts ~68% across the
+   stage; widen the cap accordingly so the long subtitle lines don't wrap. */
+#title-slide > h1.title,
+#title-slide > .quarto-title-authors {
+  max-width: 66%;
 }
 
 .custom-title-slide h1 {
@@ -256,6 +264,16 @@ iframe {
 
 .purple-border {
   border: 2px solid #5654A2;
+}
+
+/* Reveal centers lists as inline-blocks on centered slides, so each list's
+   left edge depends on its own width and the two bullet groups on the Survey
+   Fielding slide land at different indents. On slides marked .left-lists,
+   lists become normal blocks pinned to one shared left edge instead; the 2em
+   margin keeps the bullets indented relative to the group headings. */
+.reveal .left-lists ul {
+  display: block;
+  margin-left: 2.5em;
 }
 
 .img-middle img {

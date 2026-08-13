@@ -251,7 +251,7 @@ There are 6 SMC conjoint questions. In each question, participants are provided 
 Likewise, there are 6 V2G conjoint questions.
 :::
 
-## Survey Fielding - 1,356 in Total {.light-centered .center}
+## Survey Fielding - 1,356 in Total {.light-centered .center .left-lists}
 
 ::: {.columns}
 ::: {.column width="40%"}

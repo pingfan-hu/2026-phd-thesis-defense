@@ -263,7 +263,7 @@ show_if_survey()
 show_if_app()
 ```
 
-::: {.bubble-top style="text-align: center; display: block; transform: none; top: 40%;"}
+::: {.bubble-top style="text-align: center; display: block; position: relative; left: 0; top: 0; transform: none; margin: 30px auto 0;"}
 Condition ~ Target
 
 <br>
