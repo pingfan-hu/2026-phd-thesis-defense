@@ -38,7 +38,7 @@ Hu, Pingfan, Bunea, Bogdan, & Helveston, J. P. (2025). "surveydown: An open-sour
 
 ::: {style="text-align: left;"}
 
-❌ Reproduciblity
+❌ Reproducibility
 
 ::: {.fragment}
 ❌ Version control
@@ -303,7 +303,7 @@ surveycode("13-27")
 ::: {.bubble-left style="display: block; transform: none; top: 45%;"}
 Page content
 
-- Markdown for texts, images, etc.
+- Markdown for text, images, etc.
 - `sd_question()` for survey questions
 - `sd_next()` for page navigation
 :::
@@ -379,7 +379,7 @@ surveycode("18,20,21,22")
 ::: {.column style="width: 48%;"}
 `survey.qmd`
 
-A **Quarto doc** defining the survey content (pages, texts, images, questions, etc).
+A **Quarto doc** defining the survey content (pages, text, images, questions, etc.).
 :::
 
 ::: {.column width="4%"}

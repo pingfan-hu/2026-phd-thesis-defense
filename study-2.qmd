@@ -20,8 +20,8 @@ Manuscript ERIS-100972, awaiting review
 ## Recall the SMC Peak-shaving {.light-centered .center}
 
 ::: {style="font-size: 32px;"}
-- SMC smooths out EV charging spike (called "Peak-shaving").
-- Electricity demand is controlled below capacity threshold.
+- SMC smooths out the EV charging spike (called "Peak-shaving").
+- Electricity demand is controlled below the capacity threshold.
 - It saves money and reduces pollution.
 :::
 
@@ -617,7 +617,7 @@ The efficiency frontiers by season tell the same story: CAISO's four curves near
 ::: {style="text-align: center; font-size: 28px;"}
 - Smart charging programs motivated EV owners to **charge off-peak**.
 - More incentive results in more enrollment.
-- Stated preference surveys are not calibrated with current pilot programs.
+- Stated preference surveys are not calibrated against current pilot programs.
 :::
 
 ::: {.notes}
@@ -627,7 +627,7 @@ First, smart charging programs motivated EV owners to charge off-peak: MCE Sync 
 
 Second, more incentive results in more enrollment. PCE's randomized pilot shows this directly: 1.4% with no payment, rising monotonically to 10.6% at $40 per month. Our simulation reveals the same relationship from the stated preference side.
 
-Third, stated preference surveys are not calibrated with these pilot programs: real enrollment sits around 4 to 10 percent, below our 30 to 50 percent target. That's expected: stated preference always overstates real behavior, and these pilots are limited to small areas over short periods, so they carry their own biases. But this is exactly why stated preference is still valuable: it gives a theoretical benchmark, the optimistic upper bound of what these programs can achieve. And even though the numbers are optimistic, the trend is correct: the field data confirms the direction our model predicts.
+Third, stated preference surveys are not calibrated against these pilot programs: real enrollment sits around 4 to 10 percent, below our 30 to 50 percent target. That's expected: stated preference always overstates real behavior, and these pilots are limited to small areas over short periods, so they carry their own biases. But this is exactly why stated preference is still valuable: it gives a theoretical benchmark, the optimistic upper bound of what these programs can achieve. And even though the numbers are optimistic, the trend is correct: the field data confirms the direction our model predicts.
 
 If asked: the 7% SmartCharge New York enrollment is our calculation: 731 participants against roughly 9,900 EVs registered in Con Edison territory per NYSERDA data; the report itself doesn't state a percentage.
 :::
@@ -645,7 +645,7 @@ If asked: the 7% SmartCharge New York enrollment is our calculation: 731 partici
       <td colspan="2" style="padding: 16px 14px; border-top: 1px solid #333; text-align: left;"><span style="display: flex;"><span style="white-space: pre;">2\. </span><span><strong style="color: #ED6D46;">Peak-shaving</strong> potential is:<br>14.4% for CAISO, and 7.9% for NYISO.</span></span></td>
     </tr>
     <tr>
-      <td colspan="2" style="padding: 16px 14px; border-top: 1px solid #333; text-align: left;"><span style="display: flex;"><span style="white-space: pre;">3\. </span><span>SMC has <strong style="color: #739C69;">co-benefits</strong> beyond monetary value:<br>less emission, longer battery life, and less storage capacity requirement.</span></span></td>
+      <td colspan="2" style="padding: 16px 14px; border-top: 1px solid #333; text-align: left;"><span style="display: flex;"><span style="white-space: pre;">3\. </span><span>SMC has <strong style="color: #739C69;">co-benefits</strong> beyond monetary value:<br>fewer emissions, longer battery life, and lower storage capacity requirements.</span></span></td>
     </tr>
     <tr>
       <td style="width: 20%; padding: 16px 14px; border-top: 1px solid #333; border-right: 1px solid #333; background-color: #F3F1E8; text-align: center;"><strong style="color: #F07167;">Limitations</strong></td>
@@ -665,5 +665,5 @@ Second, the magnitude: at best, SMC shaves 14.4% off CAISO's evening peak and 7.
 
 Third, co-benefits. Shifting charging into the overnight valley reduces marginal emissions, the 20-to-80% SOC window extends battery life, and an enrolled fleet acts as dispatchable capacity that defers new transmission and generation investment. None of these are monetized in our efficiency frontiers, so the frontiers are a lower bound on the total value of SMC.
 
-Finally, the limitations. The enrollment curve comes from stated preference, so it may overstate real uptake and our cost estimates may be a lower bound. We model residential Level 2 charging in single-family homes only, which is relevant for NYISO, where New York City is largely multi-family. And results are calibrated to 2025 net load, so they shouldn't be extrapolated to future high-solar, high-storage grids.
+Finally, the limitations. The enrollment curve comes from stated preference, so it may overstate real uptake and our cost estimates may be a lower bound. We model residential Level 2 charging in single-family homes only, which is less relevant for NYISO, where New York City is largely multi-family. And results are calibrated to 2025 net load, so they shouldn't be extrapolated to future high-solar, high-storage grids.
 :::

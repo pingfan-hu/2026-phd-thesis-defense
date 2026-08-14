@@ -19,18 +19,18 @@ Hu, Pingfan, Tarroja, B., Dean, M., Forrest, K., Hittinger, E., Jenn, A. & Helve
 
 ## Prior studies have few EV owners in sample {.light-centered .center}
 
-1. A survey-based study by @wong_incentives_2023 examined **incentives** effect on EV owners' acceptance, <span style="color: #739C69">but EV ownership in sample was only 19%</span>.
+1. A survey-based study by @wong_incentives_2023 examined **incentives'** effect on EV owners' acceptance, <span style="color: #739C69">but EV ownership in sample was only 19%</span>.
 2. A survey-based study by @philip_consumer_2024 found **range anxiety** matters, <span style="color: #739C69">but EV ownership in sample was only 1.28%</span>.
 3. A survey-based study by @huang_are_2021 indicates the importance of **fast charging**, <span style="color: #739C69">but the sample size was only 157</span>.
 
 <br>
 
 ::: {.centered-container}
-We need high EV ownership & large sample size.
+We need high EV ownership & a large sample size.
 :::
 
 ::: {.notes}
-There's been a few studies that looked on people's willingness to participate to smart charging programs, but they all have small sample size and low EV ownership. Therefore, we aimed to conduct a large-scale survey with high EV ownership to study BEV owners' preferences.
+There have been a few studies that looked at people's willingness to participate in smart charging programs, but they all have small sample sizes and low EV ownership. Therefore, we aimed to conduct a large-scale survey with high EV ownership to study BEV owners' preferences.
 :::
 
 ## Research Questions {style="line-height: 2;" .light-centered .center}
@@ -49,7 +49,7 @@ There's been a few studies that looked on people's willingness to participate to
 :::
 
 ::: {.notes}
-Here we have 2 research questions. Firstly, we want to know the sensitivity of each smart charging program feature; secondly, we want to know under what conditions will BEV owners be more willing to opt in to the programs.
+Here we have 2 research questions. Firstly, we want to know the sensitivity of each smart charging program feature; secondly, we want to know under what conditions BEV owners will be more willing to opt in to the programs.
 
 In order to answer these questions, we designed a conjoint survey to collect BEV owners' willingness to participate. Then we used mixed logit models to simulate the utility of each program feature.
 :::
@@ -88,7 +88,7 @@ In order to answer these questions, we designed a conjoint survey to collect BEV
 :::
 
 ::: {.notes}
-But first, I want to explain what conjoint question is. If I care about apples, I would want to know how people value type vs price vs freshness. In this apple example, you can only choose one set of the attributes, so if you pick one option, you pick all the attributes in it. In short, conjoint is about forcing people to make trade-offs.
+But first, I want to explain what a conjoint question is. If I care about apples, I would want to know how people value type vs price vs freshness. In this apple example, you can only choose one set of the attributes, so if you pick one option, you pick all the attributes in it. In short, conjoint is about forcing people to make trade-offs.
 :::
 
 ## SMC Programs {.smaller style="line-height: 1.8;" .light-centered .center}
@@ -161,7 +161,7 @@ Let's move on to the conjoint question for SMC programs. Again SMC is short for 
 
 Here is a sample SMC program. You can see the one-time enrollment cash, recurring monthly cash, and how many times per month the charging can be shifted back to normal.
 
-The battery thresholds here are well-designed to provide an immediate visual aid of the minimum battery and guaranteed battery. We also used milage instead of percentage to make it more intuitive. The mileage will be shown according to the real values of each participant.
+The battery thresholds here are well-designed to provide an immediate visual aid of the minimum battery and guaranteed battery. We also used mileage instead of percentage to make it more intuitive. The mileage will be shown according to the real values of each participant.
 :::
 
 ## V2G Programs {.smaller style="line-height: 1.8;" .light-centered .center}
@@ -240,7 +240,7 @@ The battery thresholds are in the same layout, but since V2G drains the battery,
 ![](/figs/study-1/smc_question.jpg){fig-align="center"}
 
 ::: {.notes}
-There are 6 SMC conjoint questions. In each question, participants are provided with 2 valid options and a "Not Interested" option. It's important to have this "Not Interested" option, because it is a validation of willingness. When participants choose from these 2 valid options, they are surely to be interested in what they choose. Otherwise, they will choose "Not Interested".
+There are 6 SMC conjoint questions. In each question, participants are provided with 2 valid options and a "Not Interested" option. It's important to have this "Not Interested" option, because it is a validation of willingness. When participants choose from these 2 valid options, they are sure to be interested in what they choose. Otherwise, they will choose "Not Interested".
 :::
 
 ## Sample V2G Question {.light-centered .center}
@@ -276,7 +276,7 @@ Likewise, there are 6 V2G conjoint questions.
 :::
 
 ::: {.notes}
-We collected in total of 1,356 complete, filtered responses from Meta and Dynata throughout 2024, and we made sure that all participants are real BEV owners.
+We collected a total of 1,356 complete, filtered responses from Meta and Dynata throughout 2024, and we made sure that all participants are real BEV owners.
 :::
 
 ## Survey Question - Car Ownership {.light-centered .center}
@@ -305,7 +305,7 @@ This is a showcase of the top 10 BEV models from our survey results. You can see
 :::
 
 ::: {.notes}
-Other than the BEV models, there are also some important demographics information collected in the survey. You can see most families have 2 cars; most of owners charge at home for more than 8 hours; and most of them care of climate very much. And more importantly, we have 100% BEV ownership.
+Other than the BEV models, there are also some important demographic information collected in the survey. You can see most families have 2 cars; most owners charge at home for more than 8 hours; and most of them care about climate very much. And more importantly, we have 100% BEV ownership.
 :::
 
 ## Survey Results - Willingness to Participate {.smaller .light-centered .center}
@@ -323,7 +323,7 @@ P_j = \frac{e^{v_j}}{\sum_{k=1}^{J} e^{v_k}}
 $$
 
 ::: {style="text-align: center;"}
-Utility esimated using maximum likelihood estimation (MLE).
+Utility estimated using maximum likelihood estimation (MLE).
 :::
 :::
 
@@ -348,7 +348,7 @@ Utility esimated using maximum likelihood estimation (MLE).
 ::: {.notes}
 The willingness to participate is quantified with the mixed logit model, shortened as MXL. The utility of each option is a linear combination of the attributes, which is the $v_j$ here, plus an error term, shown as $\epsilon_j$. The probability of choosing an option is the exponential of its utility divided by the sum of exponentials of all utilities.
 
-Here are the coefficient estimate plots of both programs. As you can see, the "No Choice" has highgest coefficient, which simply means that without compensation, users will not participate in the programs.
+Here are the coefficient estimate plots of both programs. As you can see, the "No Choice" has the highest coefficient, which simply means that without compensation, users will not participate in the programs.
 
 However, coefficients alone are not enough to interpret the willingness to participate. A more intuitive approach is the sensitivity, which means by how much the enrollment rate will change when a feature value changes.
 :::
@@ -467,6 +467,6 @@ v2g_attr_equiv %>%
 ::: {style="font-size: 26px;"}
 1. **Smaller** value indicates higher efficiency.
 2. **Monetary** incentives are valued more in V2G than SMC.
-3. **Guaranteed** thresholds are in high efficiency, indicating range anxiety.
+3. **Guaranteed** thresholds are highly efficient, indicating range anxiety.
 4. Attribute equivalencies can be used to inform incentive design.
 :::

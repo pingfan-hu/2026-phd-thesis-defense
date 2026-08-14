@@ -12,14 +12,14 @@ source("scripts.R")
 
 ::: {style="font-size: 26px;"}
 1. **Flexibility** is highly valued.
-2. **Recurring** incentives are more important than one-time.
+2. **Recurring** incentives are more important than one-time ones.
 3. Payment alone is not enough.
 :::
 
 ::: {.notes}
-So, after analysis of all these individual features, we can combine them into programs. We call them "scenarios". I want to emphasize that the purpose of doing these evaluations is to wisely allocate the resources of the grid. Therefore, we need to maximize the enrollment of each program with least efforts.
+So, after analysis of all these individual features, we can combine them into programs. We call them "scenarios". I want to emphasize that the purpose of doing these evaluations is to wisely allocate the resources of the grid. Therefore, we need to maximize the enrollment of each program with the least effort.
 
-Here for SMC we have 3 scenarios. They are flexibility, recurring cash, and one-time cash designated.
+Here for SMC we have 3 scenarios. They are flexibility, recurring cash, and one-time cash.
 
 As we can see, for SMC, flexibility is highly valued, and recurring incentives are more important than one-time. So due to the range anxiety, payment alone is not enough. There should be a combination of flexibility and monetary incentives.
 :::
@@ -28,13 +28,13 @@ As we can see, for SMC, flexibility is highly valued, and recurring incentives a
 ![](/figs/study-1/v2g_scenario_plot.png){fig-align="center"}
 
 ::: {style="font-size: 26px;"}
-1. Still, **recurring** incentives are more important than one-time.
-2. But **flexibility** is not as important compared with SMC.
+1. Still, **recurring** incentives are more important than one-time ones.
+2. But **flexibility** is not as important as in SMC.
 3. Owners are willing to leverage BEV as a source of income.
 :::
 
 ::: {.notes}
-For V2G programs, recurring incentives are also more important than one-time. But flexibility is compromised since owners are willing to use their BEVs as a source of income. So the V2G programs are more incentive powered than SMC programs.
+For V2G programs, recurring incentives are also more important than one-time. But flexibility is compromised since owners are willing to use their BEVs as a source of income. So the V2G programs are more incentive-powered than SMC programs.
 :::
 
 ## Smart Charging Enrollment Simulator {style="text-align: center;" .light-centered .center}
