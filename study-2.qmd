@@ -20,7 +20,7 @@ Manuscript ERIS-100972, awaiting review
 ## Recall the SMC Peak-shaving {.light-centered .center}
 
 ::: {style="font-size: 32px;"}
-- SMC smooths out the EV charging spike (called "Peak-shaving").
+- SMC smooths out the BEV charging spike (called "Peak-shaving").
 - Electricity demand is controlled below the capacity threshold.
 - It saves money and reduces pollution.
 :::
@@ -28,7 +28,7 @@ Manuscript ERIS-100972, awaiting review
 ![](/figs/study-1/education_1.png){fig-align="center" width="90%"}
 
 ::: {.notes}
-Quick recall from Study 1: SMC shifts EV charging away from the evening peak, so the total demand stays below the capacity threshold.
+Quick recall from Study 1: SMC shifts BEV charging away from the evening peak, so the total demand stays below the capacity threshold.
 :::
 
 ## Prior studies assume enrollment is high and free {style="line-height: 1.5;" .light-centered .center}
@@ -395,7 +395,7 @@ Now we move from the method to the results. On an annual average day with full e
 :::
 
 ::: {.notes}
-Performance varies a lot day to day. CAISO's best day shaves 5.4 gigawatts, its worst under 2. Important nuance: extreme days are ranked by how much peak can be shaved, not by how high the peak is: on heat-wave days, air conditioning dominates and EV charging is a small share, so SMC has less leverage.
+Performance varies a lot day to day. CAISO's best day shaves 5.4 gigawatts, its worst under 2. Important nuance: extreme days are ranked by how much peak can be shaved, not by how high the peak is: on heat-wave days, air conditioning dominates and BEV charging is a small share, so SMC has less leverage.
 :::
 
 ## Peak Shaving: [NYISO]{style="color: #739C69;"} Extreme Days {.light-centered .center}
@@ -447,12 +447,12 @@ Mixed logit prediction based on ~1300 real BEV owners.
 This is the bridge between the two studies. The mixed logit model from Study 1, holding non-monetary attributes fixed, gives the enrollment rate as a function of the monthly incentive. About 30% would participate with no payment at all, \$20 a month gets you to about 60%, but full enrollment would take \$85 per household per month. The curve is concave, meaning every additional dollar buys less enrollment, and since utilities pay a uniform incentive to everyone, total program cost grows non-linearly.
 :::
 
-## Peak from EV charging decreases with higher enrollment {.light-centered style="font-size: 0.85em;" .center}
+## Peak from BEV charging decreases with higher enrollment {.light-centered style="font-size: 0.85em;" .center}
 
 ![](/figs/study-2/fig_2_14_step_5_incentive_vs_peak_reduction.png){fig-align="center" width="100%" .purple-border}
 
 ::: {.notes}
-The final step joins the peak-shaving results with the enrollment curve: as enrollment rises, the peak from EV charging falls in both regions. Each dot along a curve is a 10% enrollment step, and program cost is the incentive times the number of enrolled households. The dots spread out along the cost axis at higher enrollment: attracting marginal participants requires raising the payment for all existing enrollees, so marginal costs rise sharply.
+The final step joins the peak-shaving results with the enrollment curve: as enrollment rises, the peak from BEV charging falls in both regions. Each dot along a curve is a 10% enrollment step, and program cost is the incentive times the number of enrolled households. The dots spread out along the cost axis at higher enrollment: attracting marginal participants requires raising the payment for all existing enrollees, so marginal costs rise sharply.
 :::
 
 ## Cost Efficiency Frontier {.light-centered .center}

@@ -10,7 +10,7 @@
 
 <br>
 
-- **Study 1:** First *large N* [survey study]{style="color: #ED6D46;"} of EV owner *preference sensitivities* to smart charging. Introduces *attribute equivalencies* for incentive design.
+- **Study 1:** First *large N* [survey study]{style="color: #ED6D46;"} of BEV owner *preference sensitivities* to smart charging. Introduces *attribute equivalencies* for incentive design.
 - **Study 2:** Quantifies [peak-shaving]{style="color: #2980B9;"} potential and [cost efficiency]{style="color: #2980B9;"} of SMC in CAISO and NYISO by integrating empirical enrollment with grid simulation, showing optimal outcome in moderate enrollment.
 - **Study 3:** `surveydown`, a free open-source survey platform for programmable, reproducible survey designs.
 

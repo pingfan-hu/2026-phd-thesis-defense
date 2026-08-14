@@ -5,7 +5,7 @@ library(tidyverse)
 library(kableExtra)
 ```
 
-## <span style="color: #FFB84D;">Study 1</span><br>Electric Vehicle Smart Charging Adoption {.dark-centered .center}
+## <span style="color: #FFB84D;">Study 1</span><br>Battery Electric Vehicle Smart Charging Adoption {.dark-centered .center}
 
 <br>
 
@@ -26,11 +26,11 @@ Hu, Pingfan, Tarroja, B., Dean, M., Forrest, K., Hittinger, E., Jenn, A. & Helve
 <br>
 
 ::: {.centered-container}
-We need high EV ownership & a large sample size.
+We need high BEV ownership & a large sample size.
 :::
 
 ::: {.notes}
-There have been a few studies that looked at people's willingness to participate in smart charging programs, but they all have small sample sizes and low EV ownership. Therefore, we aimed to conduct a large-scale survey with high EV ownership to study BEV owners' preferences.
+There have been a few studies that looked at people's willingness to participate in smart charging programs, but they all have small sample sizes and low EV ownership. Therefore, we aimed to conduct a large-scale survey with high BEV ownership to study BEV owners' preferences.
 :::
 
 ## Research Questions {style="line-height: 2;" .light-centered .center}

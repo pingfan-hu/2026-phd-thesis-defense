@@ -44,7 +44,7 @@ Smart charging is a type of managed charging, which includes Supplier-Managed Ch
 ## SMC - Supplier Managed Charging {.light-centered .center}
 
 ::: {style="font-size: 32px;"}
-- SMC smooths out the EV charging spike (called "Peak-shaving").
+- SMC smooths out the BEV charging spike (called "Peak-shaving").
 - Electricity demand is controlled below the capacity threshold.
 - It saves money and reduces pollution.
 :::
@@ -52,7 +52,7 @@ Smart charging is a type of managed charging, which includes Supplier-Managed Ch
 ![](/figs/study-1/education_1_half.png){fig-align="center" width="90%"}
 
 ::: {.notes}
-For SMC, Supplier-Managed Charging, it smooths out the overnight EV charging demand.
+For SMC, Supplier-Managed Charging, it smooths out the overnight BEV charging demand.
 
 As you can see, with unmanaged charging, the BEV load easily exceeds the capacity threshold.
 :::
@@ -60,7 +60,7 @@ As you can see, with unmanaged charging, the BEV load easily exceeds the capacit
 ## SMC - Supplier Managed Charging {.light-centered .center}
 
 ::: {style="font-size: 32px;"}
-- SMC smooths out the EV charging spike (called "Peak-shaving").
+- SMC smooths out the BEV charging spike (called "Peak-shaving").
 - Electricity demand is controlled below the capacity threshold.
 - It saves money and reduces pollution.
 :::
@@ -89,7 +89,7 @@ V2G is short for Vehicle-to-Grid. It is another type of smart charging that allo
 #### <span style="color: #2C8475;">Survey Research & Modeling</span> {style="text-align: center;"}
 
 ::: {.centered-container style="width: 900px;"}
-Electric Vehicle Smart Charging Adoption
+Battery Electric Vehicle Smart Charging Adoption
 :::
 :::
 
