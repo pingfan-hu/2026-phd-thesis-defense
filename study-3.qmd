@@ -226,7 +226,7 @@ surveycode("1-5")
 
 ::: {.column width="48%"}
 
-::: {.bubble-left style="display: block; transform: none; top: 10%;"}
+::: {.bubble-left style="display: block; transform: none;"}
 YAML header for a "clean" output
 :::
 
@@ -250,7 +250,7 @@ surveycode("7-9")
 
 ::: {.column width="48%"}
 
-::: {.bubble-left style="display: block; transform: none; top: 25%;"}
+::: {.bubble-left style="display: block; transform: none;"}
 Load the `surveydown` Package
 :::
 
@@ -274,10 +274,26 @@ surveycode("11,29")
 
 ::: {.column width="48%"}
 
-::: {.bubble-left style="display: block; transform: none; top: 32%;"}
-Use Quarto fences (`:::`)
+::: {.bubble-left data-lines="11" style="display: block; transform: none; text-align: left;"}
+Use triple-dash marker (`---`)
 
 to define survey pages
+:::
+
+::: {.fragment .bubble-left data-stack="24" style="display: block; transform: none; text-align: left;"}
+Quarto fences (`:::`) also OK:
+
+<br>
+
+`::: {#welcome .sd-page}`
+
+<br>
+
+`Page content`
+
+<br>
+
+`:::`
 :::
 
 :::
@@ -300,7 +316,7 @@ surveycode("13-27")
 
 ::: {.column width="48%"}
 
-::: {.bubble-left style="display: block; transform: none; top: 45%;"}
+::: {.bubble-left style="display: block; transform: none;"}
 Page content
 
 - Markdown for text, images, etc.
