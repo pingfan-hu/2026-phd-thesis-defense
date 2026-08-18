@@ -17,7 +17,7 @@
 ::: {.notes}
 I start with survey research on smart charging, followed by a nation-wide grid simulation, and a survey software.
 
-I hope these studies could benefit sustainable transportation, and make lasting contributions to future research.
+I hope these studies could benefit transportation systems, and make lasting contributions to future research.
 :::
 
 ## Thanks for listening! {.light-centered .center}
