@@ -5,7 +5,7 @@ library(tidyverse)
 library(kableExtra)
 ```
 
-## <span style="color: #FFB84D;">Study 1</span><br>Battery Electric Vehicle Smart Charging Adoption {.dark-centered .center}
+## <span style="color: #FFB84D; display: block; margin-bottom: 0.5em;">Study 1</span>Battery Electric Vehicle Smart Charging Adoption {.dark-centered .center}
 
 <br>
 
@@ -469,4 +469,15 @@ v2g_attr_equiv %>%
 2. **Monetary** incentives are valued more in V2G than SMC.
 3. **Guaranteed** thresholds are highly efficient, indicating range anxiety.
 4. Attribute equivalencies can be used to inform incentive design.
+:::
+
+## Smart Charging Enrollment Simulator {style="text-align: center;" .light-centered .center}
+
+[![](/figs/study-1/simulator.png){width="100%" fig-align="center" style="border: 2px solid #5654A2;"}](https://gwuvehicle.shinyapps.io/enrollment_simulator/)
+
+::: {.notes}
+Here we've made a smart charging enrollment simulator. We can play around with it and see the anticipated enrollment of each program, with different feature values.
+
+1. More enrollment increase in SMC: Guaranteed threshold from 60% to 100%.
+2. More enrollment increase in V2G: Recurring cash from $2 to $20.
 :::

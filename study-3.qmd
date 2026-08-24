@@ -4,7 +4,7 @@
 source("scripts.R")
 ```
 
-## <span style="color: #FFB84D;">Study 3</span><br>The `surveydown` Survey Platform {.dark-centered .center}
+## <span style="color: #FFB84D; display: block; margin-bottom: 0.5em;">Study 3</span>The `surveydown` Survey Platform {.dark-centered .center}
 
 <br>
 
@@ -14,6 +14,10 @@ Published in *PLoS ONE*:
 <br>
 
 Hu, Pingfan, Bunea, Bogdan, & Helveston, J. P. (2025). "surveydown: An open-source, markdown-based platform for programmable and reproducible surveys" *PLOS ONE*, 20(8), e0331002. https://doi.org/10.1371/journal.pone.0331002
+
+<br>
+
+<a class="link-pill link-pill--dark" href="https://surveydown.org" target="_blank" rel="noopener"><i data-lucide="globe"></i>surveydown.org<i data-lucide="arrow-up-right"></i></a>
 :::
 
 ## Typical Web Survey {.light-centered .center}
@@ -124,10 +128,12 @@ Expensive!
 Markdown + `R code` chunks
 :::
 
+::: {style="font-size: 1.15em;"}
 ```{r}
 #| results: 'asis'
 quarto_r_html()
 ```
+:::
 
 :::
 
@@ -143,44 +149,6 @@ quarto_r_html()
 ![](/figs/study-3/quarto-r-html.png){fig-align="center" width=100%}
 
 :::
-
-## {style="font-size: 0.7em;" .light-centered .center}
-
-::: {.column width="48%"}
-
-### Original `qmd` file {style="text-align: center;"}
-
-<br>
-<br>
-
-::: {style="text-align: center;"}
-Markdown + `Python code` chunks
-:::
-
-```{r}
-#| results: 'asis'
-quarto_python_pdf()
-```
-
-:::
-
-::: {.column width="4%"}
-:::
-
-::: {.column .fragment width="48%"}
-
-### Rendered PDF {style="text-align: center;"}
-
-<br>
-
-![](/figs/study-3/quarto-python-pdf.png){fig-align="center" width=100%}
-
-:::
-
-## {.light-centered .center}
-
-![](/figs/study-3/what-is-surveydown.png){width=100%}
-
 
 ## {style="font-size: 0.7em;" .light-centered .center}
 
@@ -445,8 +413,50 @@ An **R script** defining the survey Shiny app.
 
 ![](/figs/study-3/comparisons.png){fig-align="center" width=100% .purple-border}
 
+## `surveydown` works with AI agents {.light-centered .center}
+
+```{=html}
+<div style="width: 88%; margin: 0 auto; background-image: radial-gradient(circle, #E0DBE5 0.6px, transparent 0.6px); background-size: 18px 18px; padding: 1.2em 1.1em; border-radius: 18px;">
+ <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em;">
+  <div style="background: #FFFFFF; border: 1px solid #E3DCD2; border-radius: 14px; padding: 1.05em 0.9em 1.05em 2em; box-shadow: 0 6px 18px rgba(44, 62, 80, 0.08); display: flex; align-items: center; justify-content: flex-start; gap: 0.7em;">
+   <div style="width: 2.1em; height: 2.1em; border-radius: 0.55em; background: #EEEDF8; border: 1px solid #C7C1E5; display: flex; align-items: center; justify-content: center; color: #5654A2; flex-shrink: 0;"><i data-lucide="square-pen" style="width: 1.05em; height: 1.05em; stroke-width: 1.8;"></i></div>
+   <div style="font-family: 'Maple Mono', monospace; font-size: 0.56em; font-weight: 700; color: #5654A2; line-height: 1.2;">Create Survey</div>
+  </div>
+  <div style="background: #FFFFFF; border: 1px solid #E3DCD2; border-radius: 14px; padding: 1.05em 0.9em 1.05em 2em; box-shadow: 0 6px 18px rgba(44, 62, 80, 0.08); display: flex; align-items: center; justify-content: flex-start; gap: 0.7em;">
+   <div style="width: 2.1em; height: 2.1em; border-radius: 0.55em; background: #DCE9FA; border: 1px solid #A6C4EA; display: flex; align-items: center; justify-content: center; color: #3A7DC9; flex-shrink: 0;"><i data-lucide="database" style="width: 1.05em; height: 1.05em; stroke-width: 1.8;"></i></div>
+   <div style="font-family: 'Maple Mono', monospace; font-size: 0.56em; font-weight: 700; color: #3A7DC9; line-height: 1.2;">Connect Database</div>
+  </div>
+  <div style="background: #FFFFFF; border: 1px solid #E3DCD2; border-radius: 14px; padding: 1.05em 0.9em 1.05em 2em; box-shadow: 0 6px 18px rgba(44, 62, 80, 0.08); display: flex; align-items: center; justify-content: flex-start; gap: 0.7em;">
+   <div style="width: 2.1em; height: 2.1em; border-radius: 0.55em; background: #E5F2EE; border: 1px solid #BCDFC0; display: flex; align-items: center; justify-content: center; color: #2C8475; flex-shrink: 0;"><i data-lucide="cloud-upload" style="width: 1.05em; height: 1.05em; stroke-width: 1.8;"></i></div>
+   <div style="font-family: 'Maple Mono', monospace; font-size: 0.56em; font-weight: 700; color: #2C8475; line-height: 1.2;">Deploy Online</div>
+  </div>
+  <div style="background: #FFFFFF; border: 1px solid #E3DCD2; border-radius: 14px; padding: 1.05em 0.9em 1.05em 2em; box-shadow: 0 6px 18px rgba(44, 62, 80, 0.08); display: flex; align-items: center; justify-content: flex-start; gap: 0.7em;">
+   <div style="width: 2.1em; height: 2.1em; border-radius: 0.55em; background: #FEF5E7; border: 1px solid #F0DDB4; display: flex; align-items: center; justify-content: center; color: #C4881A; flex-shrink: 0;"><i data-lucide="video" style="width: 1.05em; height: 1.05em; stroke-width: 1.8;"></i></div>
+   <div style="font-family: 'Maple Mono', monospace; font-size: 0.56em; font-weight: 700; color: #C4881A; line-height: 1.2;">Record Video</div>
+  </div>
+ </div>
+ <div style="height: 1px; background: linear-gradient(90deg, transparent, #C4C3E8, transparent); margin-top: 1.4em;"></div>
+ <div style="margin-top: 1.2em; text-align: center;">
+  <a class="link-pill" href="https://github.com/surveydown-dev/surveydown-skill" target="_blank" rel="noopener">/surveydown-skill</a>
+ </div>
+</div>
+```
+
+
+::: {.notes}
+As a wrap-up to the surveydown study: the platform also collaborates with the new agentic AI engineering workflow. I built the surveydown-skill, a single skill that teaches AI agents like Claude Code the whole platform. It covers four capabilities: creating a survey, connecting a database, deploying online, and recording a video walkthrough, and each one is a full workflow rather than a loose hint. The skill is open source on GitHub.
+:::
+
 ## Star Count on GitHub {.light-centered .center}
 
-![](/figs/study-3/surveydown-star-history.png){fig-align="center" width=80% .purple-border}
+![](/figs/study-3/star-history.png){fig-align="center" width=85% .purple-border}
 
-## [**surveydown.org**](https://surveydown.org) {.dark-centered .center style="font-size: 1.2em;"}
+<a class="link-pill" href="https://github.com/surveydown-dev/surveydown" target="_blank" rel="noopener"><i data-lucide="folder-git-2"></i>surveydown-dev/surveydown<i data-lucide="arrow-up-right"></i></a>
+
+## The companion [`sdstudio`](https://github.com/surveydown-dev/sdstudio/) package {.light-centered .center}
+
+![](/figs/study-3/sdstudio-build.gif){fig-align="center" width=90% .purple-border}
+
+## The companion [`sdstudio`](https://github.com/surveydown-dev/sdstudio/) package {.light-centered .center}
+
+![](/figs/study-3/sdstudio-preview.gif){fig-align="center" width=90% .purple-border}

@@ -288,3 +288,82 @@ iframe {
   margin-left: 34%;
 }
 
+/* Bottom link pill, ported from the agentic-workshop slides (styles/slides.scss).
+   Scoped as `.reveal a.` so it beats Quarto's `.reveal a` color rules, which
+   otherwise darken the text on hover. font-size is 0.65em (not the workshop's
+   0.48em) because the intro slides set a 30px body size vs the 36px root, and
+   this deck runs the pill a step larger. The resting fill is the purple tint
+   (not white) so the solid-purple hover reads as the same color deepening. */
+.reveal a.link-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: 'Maple Mono', monospace;
+  font-size: 0.65em;
+  font-weight: 700;
+  color: #5654A2 !important;
+  background: #EEEDF8;
+  border: 1px solid #C7C1E5;
+  border-radius: 999px;
+  padding: 0.4em 1.1em;
+  text-decoration: none !important;
+  box-shadow: 0 2px 6px rgba(86, 84, 162, 0.15);
+  will-change: background-color, color, transform;
+  backface-visibility: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    transform 0.1s ease;
+}
+.reveal a.link-pill svg {
+  width: 1em;
+  height: 1em;
+  stroke-width: 2;
+}
+/* The external-link arrow is the last child, set a shade smaller and nudged
+   out so it reads as a marker on the pill's edge, not as a second subject. */
+.reveal a.link-pill svg:last-child {
+  width: 0.85em;
+  height: 0.85em;
+  margin-left: 0.05em;
+  opacity: 0.8;
+}
+.reveal a.link-pill:hover {
+  color: #F8F7F0 !important;
+  background: #5654A2;
+  border-color: #5654A2;
+  box-shadow: 0 2px 6px rgba(86, 84, 162, 0.15);
+}
+.reveal a.link-pill:active {
+  transform: scale(0.96);
+}
+/* Dark-slide variant (Study 3 title): amber family against the navy ground,
+   same tint-at-rest → solid-on-hover logic as the purple pill. */
+.reveal a.link-pill--dark {
+  color: #FFB84D !important;
+  background: rgba(255, 184, 77, 0.12);
+  border-color: rgba(255, 184, 77, 0.55);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+.reveal a.link-pill--dark:hover {
+  color: #2C3E50 !important;
+  background: #FFB84D;
+  border-color: #FFB84D;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Thank-you slide: hover/press feedback for the nav pill links and the
+   presenter card (base styles live in the touhou extension). */
+.reveal .thanks-nav a {
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+.reveal .thanks-nav a:hover {
+  background-color: #C8DCF4;
+}
+.reveal .thanks-nav a:active {
+  background-color: #AECBEC;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+.reveal .thanks-card:hover {
+  background-color: #C8DCF4;
+}
+

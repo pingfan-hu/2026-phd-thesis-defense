@@ -5,7 +5,7 @@ library(kableExtra)
 source("scripts.R")
 ```
 
-## Appendix {.dark-centered .center}
+## <span style="color: #FFB84D; display: block; margin-bottom: 0.5em;">Appendix - Study 1</span>Smart Charging Adoption {.dark-centered .center}
 
 ## SMC Scenario Analysis {.light-centered .center}
 ![](/figs/study-1/smc_scenario_plot.png){fig-align="center"}
@@ -35,17 +35,6 @@ As we can see, for SMC, flexibility is highly valued, and recurring incentives a
 
 ::: {.notes}
 For V2G programs, recurring incentives are also more important than one-time. But flexibility is compromised since owners are willing to use their BEVs as a source of income. So the V2G programs are more incentive-powered than SMC programs.
-:::
-
-## Smart Charging Enrollment Simulator {style="text-align: center;" .light-centered .center}
-
-[![](/figs/study-1/simulator.png){width="100%" fig-align="center" style="border: 2px solid #5654A2;"}](https://gwuvehicle.shinyapps.io/enrollment_simulator/)
-
-::: {.notes}
-Here we've made a smart charging enrollment simulator. We can play around with it and see the anticipated enrollment of each program, with different feature values.
-
-1. More enrollment increase in SMC: Guaranteed threshold from 60% to 100%.
-2. More enrollment increase in V2G: Recurring cash from $2 to $20.
 :::
 
 ## SMC Logit Model {.smaller .light-centered .center}
@@ -116,6 +105,63 @@ v2g_table
 
 :::
 
+
+## <span style="color: #FFB84D; display: block; margin-bottom: 0.5em;">Appendix - Study 2</span>Grid Peak-Shaving Quantification {.dark-centered .center}
+
+## How Do Pilot Programs Compare? {.light-centered .center}
+
+::: {style="border: 2px solid #333; border-radius: 8px; padding: 6px 18px;"}
+
+<table style="width: 100%; border-collapse: collapse; font-size: 26px; margin: 0;">
+  <thead>
+    <tr style="background-color: #F3F1E8;">
+      <th style="width: 36%; padding: 12px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 28px; text-align: center;">Program</th>
+      <th style="width: 34%; padding: 12px 10px; border-right: 1px solid #333; border-bottom: 2px solid #333; font-size: 28px; text-align: center;">Incentive</th>
+      <th style="width: 30%; padding: 12px 10px; border-bottom: 2px solid #333; font-size: 28px; text-align: center;">Enrollment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 14px 10px; border-right: 1px solid #333; text-align: center;">PCE Managed Charging<br>[(CAISO)]{style="color: #ED6D46;"}</td>
+      <td style="padding: 14px 10px; border-right: 1px solid #333; text-align: center;">$0 → $40 per month</td>
+      <td style="padding: 14px 10px; text-align: center;">1.4% → 10.6%</td>
+    </tr>
+    <tr>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center;">MCE Sync<br>[(CAISO)]{style="color: #ED6D46;"}</td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center;">$50 bonus + $10 per month</td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; text-align: center;">10% of serviceable market</td>
+    </tr>
+    <tr>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center;">SmartCharge New York<br>[(NYISO)]{style="color: #739C69;"}</td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; border-right: 1px solid #333; text-align: center;">Up to $400 per year</td>
+      <td style="padding: 14px 10px; border-top: 1px solid #333; text-align: center;">~7% of registered EVs<br>(731 vehicles)</td>
+    </tr>
+  </tbody>
+</table>
+
+:::
+
+<br>
+
+::: {style="text-align: center; font-size: 28px;"}
+- Smart charging programs motivated EV owners to **charge off-peak**.
+- More incentive results in more enrollment.
+- Stated preference surveys are not calibrated against current pilot programs.
+:::
+
+::: {.notes}
+These are three deployed pilot programs: two in CAISO territory, one in NYISO. From them I draw three takeaways.
+
+First, smart charging programs motivated EV owners to charge off-peak: MCE Sync cut charging in the 4-to-9 PM window by nearly 90%, with 96% of charging now off-peak. This matches our program setup, which shifts enrolled charging away from the evening peak.
+
+Second, more incentive results in more enrollment. PCE's randomized pilot shows this directly: 1.4% with no payment, rising monotonically to 10.6% at $40 per month. Our simulation reveals the same relationship from the stated preference side.
+
+Third, stated preference surveys are not calibrated against these pilot programs: real enrollment sits around 4 to 10 percent, below our 30 to 50 percent target. That's expected: stated preference always overstates real behavior, and these pilots are limited to small areas over short periods, so they carry their own biases. But this is exactly why stated preference is still valuable: it gives a theoretical benchmark, the optimistic upper bound of what these programs can achieve. And even though the numbers are optimistic, the trend is correct: the field data confirms the direction our model predicts.
+
+If asked: the 7% SmartCharge New York enrollment is our calculation: 731 participants against roughly 9,900 EVs registered in Con Edison territory per NYSERDA data; the report itself doesn't state a percentage.
+:::
+
+## <span style="color: #FFB84D; display: block; margin-bottom: 0.5em;">Appendix - Study 3</span>The `surveydown` Survey Platform {.dark-centered .center}
 
 ## `surveydown` Feature Highlights {.light-centered .center}
 
@@ -254,7 +300,7 @@ show_if_survey()
 ::: {.column width="2%"}
 :::
 
-::: {.column .fragment style="width: 49%; font-size: 0.7em;"}
+::: {.column style="width: 49%; font-size: 0.7em;"}
 
 ### `app.R` {style="text-align: center;"}
 
@@ -278,12 +324,4 @@ Condition ~ Target
 
 ## The companion [`sdstudio`](https://github.com/surveydown-dev/sdstudio/) package {.light-centered .center}
 
-![](/figs/study-3/sdstudio-build.gif){fig-align="center" width=90% .purple-border}
-
-## The companion [`sdstudio`](https://github.com/surveydown-dev/sdstudio/) package {.light-centered .center}
-
-![](/figs/study-3/sdstudio-preview.gif){fig-align="center" width=90% .purple-border}
-
-## The companion [`sdstudio`](https://github.com/surveydown-dev/sdstudio/) package {.light-centered .center}
-
-![](/figs/study-3/sdstudio-data.gif){fig-align="center" width=90% .purple-border}
+![](/figs/study-3/sdstudio-data.gif){fig-align="center" width=84% .purple-border}

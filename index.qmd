@@ -20,7 +20,54 @@ I start with survey research on smart charging, followed by a nation-wide grid s
 I hope these studies could benefit transportation systems, and make lasting contributions to future research.
 :::
 
-## Thanks for listening! {.light-centered .center}
+## Thanks for listening! {.dark-centered .center}
+
+```{=html}
+<div style="width:66%;margin:0 auto;">
+
+ <a class="thanks-card" href="https://pingfan.org" target="_blank" rel="noopener" style="flex-direction:row;align-items:center;gap:0.8em;padding:0.8em 1.2em;margin-top:1.2em;width:100%;box-sizing:border-box;">
+  <div style="width:3em;height:3em;border-radius:50%;background-image:url('figs/pingfan-2.png');flex-shrink:0;background-size:cover;background-position:center;border:1.5px solid #DCE9FA;box-shadow:0 3px 10px rgba(58,125,201,0.15);"></div>
+  <div style="display:flex;flex-direction:column;gap:0.15em;">
+   <div style="font-size:0.8em;font-weight:700;color:#2C3E50;white-space:nowrap;line-height:1.2;">Pingfan Hu</div>
+   <div style="font-size:0.5em;color:#564232;white-space:nowrap;">PhD Candidate, Systems Engineering</div>
+  </div>
+  <span class="instructor-link instructor-link--blue" style="margin-left:auto;align-self:center;font-size:0.6em;padding:0.32em 0.85em;border:1.5px solid #3A7DC9;">pingfan.org</span>
+ </a>
+
+ <div style="width:70%;height:2px;margin:1.2em auto 0;border-radius:999px;background:linear-gradient(90deg,transparent,rgba(196,195,232,0.45),transparent);"></div>
+
+ <div class="thanks-nav" style="display:flex;background:#EFECE1;border-radius:999px;margin-top:1.2em;box-shadow:0 6px 22px rgba(0,0,0,0.2);overflow:hidden;">
+
+  <a href="https://pingfan.org/about.html" target="_blank" rel="noopener" style="flex:1;display:flex;align-items:center;justify-content:center;gap:0.4em;padding:0.55em 0;text-decoration:none;">
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#2C3E50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:0.75em;height:0.75em;flex-shrink:0;"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg>
+   <span style="font-size:0.5em;font-weight:700;color:#2C3E50;">About</span>
+  </a>
+
+  <div style="width:1px;background:rgba(44,62,80,0.18);margin:0.5em 0;"></div>
+
+  <a href="https://pingfan.org/blog.html" target="_blank" rel="noopener" style="flex:1;display:flex;align-items:center;justify-content:center;gap:0.4em;padding:0.55em 0;text-decoration:none;">
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#2C3E50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:0.75em;height:0.75em;flex-shrink:0;"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+   <span style="font-size:0.5em;font-weight:700;color:#2C3E50;">Blog</span>
+  </a>
+
+  <div style="width:1px;background:rgba(44,62,80,0.18);margin:0.5em 0;"></div>
+
+  <a href="https://pingfan.org/research" target="_blank" rel="noopener" style="flex:1;display:flex;align-items:center;justify-content:center;gap:0.4em;padding:0.55em 0;text-decoration:none;">
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#2C3E50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:0.75em;height:0.75em;flex-shrink:0;"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+   <span style="font-size:0.5em;font-weight:700;color:#2C3E50;">Research</span>
+  </a>
+
+  <div style="width:1px;background:rgba(44,62,80,0.18);margin:0.5em 0;"></div>
+
+  <a href="https://pingfan.org/works.html" target="_blank" rel="noopener" style="flex:1;display:flex;align-items:center;justify-content:center;gap:0.4em;padding:0.55em 0;text-decoration:none;">
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#2C3E50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:0.75em;height:0.75em;flex-shrink:0;"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg>
+   <span style="font-size:0.5em;font-weight:700;color:#2C3E50;">Works</span>
+  </a>
+
+ </div>
+
+</div>
+```
 
 {{< include /appendix.qmd >}}
 
