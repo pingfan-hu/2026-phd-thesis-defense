@@ -39,8 +39,8 @@ Quick recall from Study 1: SMC shifts BEV charging away from the evening peak, s
 
 <br>
 
-::: {.centered-container}
-We connect **consumer enrollment** with **grid simulation**.
+::: {.centered-container style="color: #2C3E50;"}
+We connect [**consumer enrollment**]{style="color: #ED6D46;"} with [**grid simulation**]{style="color: #2980B9;"}.
 :::
 
 ::: {.notes}

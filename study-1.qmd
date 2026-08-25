@@ -262,13 +262,17 @@ Likewise, there are 6 V2G conjoint questions.
 
 <span style="color: #739C69">**Meta Ads**</span>: Voluntary participants
 
+::: {style="margin-left: 1.5em;"}
 - **803** responses
 - March to July in 2024
+:::
 
 <span style="color: #739C69">**Dynata Recruitment**</span>: Paid survey
 
+::: {style="margin-left: 1.5em;"}
 - **553** responses
 - September to November in 2024
+:::
 
 ![](/figs/study-1/survey_fielding.png)
 
