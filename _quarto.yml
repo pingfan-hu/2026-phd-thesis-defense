@@ -3,6 +3,8 @@ project:
   output-dir: _site
   resources:
     - figs/pingfan-2.png
+    - figs/logo-sloan.png
+    - figs/logo-helveston.png
 
 pagetitle: "PhD Thesis Defense"
 title: "Sustainable Transportation,<br>Sustainable Research:<br><span style='font-size: 0.7em; color: #2C8475; display: inline-block; line-height: 1.5;'>Consumer Adoption and Grid Peak-Shaving<br>of Battery Electric Vehicle Smart Charging,<br>Inspiring the `surveydown` Survey Platform</span>"

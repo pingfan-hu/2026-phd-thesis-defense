@@ -1,3 +1,67 @@
+## Acknowledgments {.light-centered .center}
+
+```{=html}
+<div style="width:88%;margin:0 auto;background-image:radial-gradient(circle,#E0DBE5 0.6px,transparent 0.6px);background-size:18px 18px;padding:1.1em 1.2em;border-radius:18px;font-size:0.9em;">
+
+ <div style="display:flex;flex-direction:column;gap:0.5em;">
+
+  <div style="display:flex;align-items:center;gap:0.8em;background:#FFFFFF;border:1px solid #C7C1E5;border-radius:14px;padding:0.45em 1em;box-shadow:0 14px 32px rgba(86,84,162,0.14),0 2px 6px rgba(44,62,80,0.07);">
+   <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:#EEEDF8;border:1px solid #C7C1E5;display:flex;align-items:center;justify-content:center;color:#5654A2;flex-shrink:0;">
+    <i data-lucide="graduation-cap" style="width:1em;height:1em;stroke-width:1.8;"></i>
+   </div>
+   <div style="text-align:left;">
+    <div style="font-family:'Maple Mono',monospace;font-size:0.52em;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;color:#5654A2;">Advisor</div>
+    <div style="font-size:0.6em;font-weight:700;color:#2C3E50;line-height:1.25;">Dr. John Paul Helveston</div>
+   </div>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:0.8em;background:#FFFFFF;border:1px solid #BCDFC0;border-radius:14px;padding:0.45em 1em;box-shadow:0 14px 32px rgba(44,132,117,0.14),0 2px 6px rgba(44,62,80,0.07);">
+   <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:#E5F2EE;border:1px solid #BCDFC0;display:flex;align-items:center;justify-content:center;color:#2C8475;flex-shrink:0;">
+    <i data-lucide="users" style="width:1em;height:1em;stroke-width:1.8;"></i>
+   </div>
+   <div style="text-align:left;">
+    <div style="font-family:'Maple Mono',monospace;font-size:0.52em;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;color:#2C8475;">Examining Committee</div>
+    <div style="font-size:0.6em;font-weight:700;color:#2C3E50;line-height:1.25;">Dr. Caitlin Grady &middot; Dr. Johan Ren&eacute; van Dorp (presiding) &middot; Dr. Eric Hittinger</div>
+   </div>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:0.8em;background:#FFFFFF;border:1px solid #F0DDB4;border-radius:14px;padding:0.45em 1em;box-shadow:0 14px 32px rgba(196,136,26,0.14),0 2px 6px rgba(44,62,80,0.07);">
+   <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:#FEF5E7;border:1px solid #F0DDB4;display:flex;align-items:center;justify-content:center;color:#C4881A;flex-shrink:0;">
+    <i data-lucide="handshake" style="width:1em;height:1em;stroke-width:1.8;"></i>
+   </div>
+   <div style="text-align:left;">
+    <div style="font-family:'Maple Mono',monospace;font-size:0.52em;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;color:#C4881A;">Research Teams</div>
+    <div style="font-size:0.6em;font-weight:700;color:#2C3E50;line-height:1.25;">Smart charging team (GWU &middot; UC Davis &middot; UC Irvine &middot; RIT) &amp; the <span style="font-family:'Maple Mono',monospace;">surveydown</span> team</div>
+   </div>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:0.8em;background:#FFFFFF;border:1px solid #F0C5BA;border-radius:14px;padding:0.45em 1em;box-shadow:0 14px 32px rgba(212,95,71,0.14),0 2px 6px rgba(44,62,80,0.07);">
+   <div style="width:1.9em;height:1.9em;border-radius:0.5em;background:#FCEEEC;border:1px solid #F0C5BA;display:flex;align-items:center;justify-content:center;color:#D45F47;flex-shrink:0;">
+    <i data-lucide="heart" style="width:1em;height:1em;stroke-width:1.8;"></i>
+   </div>
+   <div style="text-align:left;">
+    <div style="font-family:'Maple Mono',monospace;font-size:0.52em;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;color:#D45F47;">Family</div>
+    <div style="font-size:0.6em;font-weight:700;color:#2C3E50;line-height:1.25;">Mr. Sixiang Hu (father) &middot; Ms. Chunzhi Ping (mother) &middot; Ms. Yangyang Li (wife)</div>
+   </div>
+  </div>
+
+ </div>
+
+ <div style="height:1px;background:linear-gradient(90deg,transparent,#C4C3E8,transparent);margin-top:1em;"></div>
+
+ <div style="display:flex;align-items:center;justify-content:center;gap:1.5em;margin-top:0.9em;">
+  <img src="figs/logo-sloan.png" style="height:1.8em;margin:0;"/>
+  <div style="width:1px;height:2em;background:#2C3E50;opacity:0.35;"></div>
+  <img src="figs/logo-helveston.png" style="height:1.8em;margin:0;"/>
+ </div>
+
+</div>
+```
+
+::: {.notes}
+Thanks to my advisor JP, my committee, the smart charging team across GWU, UC Davis, UC Irvine, and RIT, the surveydown team, and my family. This work was supported by the Alfred P. Sloan Foundation and conducted in the Helveston Lab.
+:::
+
 {{< include /intro.qmd >}}
 
 {{< include /study-1.qmd >}}
